@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "arphex:decadent_desert",
+  "features": "arphex:dust_blob_large",
+  "step": "raw_generation"
+}

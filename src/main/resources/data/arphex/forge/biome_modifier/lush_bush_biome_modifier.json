@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "arphex:crawling_canopy",
+  "features": "arphex:lush_bush",
+  "step": "surface_structures"
+}

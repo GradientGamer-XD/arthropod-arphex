@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "arphex:block/blankparticle",
+    "top": "arphex:block/blankparticle",
+    "side": "arphex:block/blankparticle"
+  },
+  "render_type": "cutout"
+}

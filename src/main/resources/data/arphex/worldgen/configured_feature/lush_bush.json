@@ -1,0 +1,13 @@
+{
+  "type": "arphex:lush_bush",
+  "config": {
+    "state": {
+      "Name": "minecraft:mangrove_leaves",
+      "Properties": {
+        "distance": "7",
+        "persistent": "false",
+        "waterlogged": "false"
+      }
+    }
+  }
+}

@@ -1,0 +1,344 @@
+package net.arphex.entity;
+
+import javax.annotation.Nullable;
+import net.arphex.init.ArphexModEntities;
+import net.arphex.procedures.AlwaysTrueProcedure;
+import net.arphex.procedures.EnormousSpiderHallucinationOnInitialEntitySpawnProcedure;
+import net.arphex.procedures.TormentorInitialEntityIsHurtProcedure;
+import net.arphex.procedures.TormentorInitialOnEntityTickUpdateProcedure;
+import net.arphex.procedures.TormentorLookAroundProcedure;
+import net.arphex.procedures.TormentorSpawnConditionProcedure;
+import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.DifficultyInstance;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.entity.AreaEffectCloud;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.SpawnGroupData;
+import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.Entity.RemovalReason;
+import net.minecraft.world.entity.SpawnPlacements.Type;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder;
+import net.minecraft.world.entity.ai.control.FlyingMoveControl;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
+import net.minecraft.world.entity.ai.navigation.PathNavigation;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.ThrownPotion;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.Heightmap.Types;
+import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.network.PlayMessages.SpawnEntity;
+import net.minecraftforge.registries.ForgeRegistries;
+import software.bernie.geckolib.animatable.GeoEntity;
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.core.animation.AnimationController;
+import software.bernie.geckolib.core.animation.AnimationState;
+import software.bernie.geckolib.core.animation.RawAnimation;
+import software.bernie.geckolib.core.animation.AnimatableManager.ControllerRegistrar;
+import software.bernie.geckolib.core.animation.AnimationController.State;
+import software.bernie.geckolib.core.object.PlayState;
+import software.bernie.geckolib.util.GeckoLibUtil;
+
+public class TormentorInitialEntity extends Monster implements GeoEntity {
+   public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(TormentorInitialEntity.class, EntityDataSerializers.BOOLEAN);
+   public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(TormentorInitialEntity.class, EntityDataSerializers.STRING);
+   public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(TormentorInitialEntity.class, EntityDataSerializers.STRING);
+   public static final EntityDataAccessor<Integer> DATA_tormenttimer = SynchedEntityData.defineId(TormentorInitialEntity.class, EntityDataSerializers.INT);
+   public static final EntityDataAccessor<String> DATA_tormentcycle = SynchedEntityData.defineId(TormentorInitialEntity.class, EntityDataSerializers.STRING);
+   private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
+   private boolean swinging;
+   private boolean lastloop;
+   private long lastSwing;
+   public String animationprocedure = "empty";
+
+   public TormentorInitialEntity(SpawnEntity packet, Level world) {
+      this((EntityType<TormentorInitialEntity>)ArphexModEntities.TORMENTOR_INITIAL.get(), world);
+   }
+
+   public TormentorInitialEntity(EntityType<TormentorInitialEntity> type, Level world) {
+      super(type, world);
+      this.xpReward = 100000;
+      this.setNoAi(false);
+      this.setMaxUpStep(0.6F);
+      this.setPersistenceRequired();
+      this.moveControl = new FlyingMoveControl(this, 10, true);
+   }
+
+   protected void defineSynchedData() {
+      super.defineSynchedData();
+      this.entityData.define(SHOOT, false);
+      this.entityData.define(ANIMATION, "undefined");
+      this.entityData.define(TEXTURE, "invisible");
+      this.entityData.define(DATA_tormenttimer, 0);
+      this.entityData.define(DATA_tormentcycle, "none");
+   }
+
+   public void setTexture(String texture) {
+      this.entityData.set(TEXTURE, texture);
+   }
+
+   public String getTexture() {
+      return (String)this.entityData.get(TEXTURE);
+   }
+
+   protected float getStandingEyeHeight(Pose poseIn, EntityDimensions sizeIn) {
+      return 10.0F;
+   }
+
+   public boolean canCollideWith(Entity entity) {
+      return true;
+   }
+
+   public boolean canBeCollidedWith() {
+      Level world = this.level();
+      double x = this.getX();
+      double y = this.getY();
+      double z = this.getZ();
+      return AlwaysTrueProcedure.execute();
+   }
+
+   public Packet<ClientGamePacketListener> getAddEntityPacket() {
+      return NetworkHooks.getEntitySpawningPacket(this);
+   }
+
+   protected PathNavigation createNavigation(Level world) {
+      return new FlyingPathNavigation(this, world);
+   }
+
+   protected void registerGoals() {
+      super.registerGoals();
+      this.goalSelector.addGoal(1, new RandomLookAroundGoal(this) {
+         public boolean canUse() {
+            double x = TormentorInitialEntity.this.getX();
+            double y = TormentorInitialEntity.this.getY();
+            double z = TormentorInitialEntity.this.getZ();
+            Entity entity = TormentorInitialEntity.this;
+            Level world = TormentorInitialEntity.this.level();
+            return super.canUse() && TormentorLookAroundProcedure.execute(entity);
+         }
+
+         public boolean canContinueToUse() {
+            double x = TormentorInitialEntity.this.getX();
+            double y = TormentorInitialEntity.this.getY();
+            double z = TormentorInitialEntity.this.getZ();
+            Entity entity = TormentorInitialEntity.this;
+            Level world = TormentorInitialEntity.this.level();
+            return super.canContinueToUse() && TormentorLookAroundProcedure.execute(entity);
+         }
+      });
+   }
+
+   public MobType getMobType() {
+      return MobType.UNDEFINED;
+   }
+
+   public boolean removeWhenFarAway(double distanceToClosestPlayer) {
+      return false;
+   }
+
+   public SoundEvent getAmbientSound() {
+      return (SoundEvent)ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("arphex:heartbeats"));
+   }
+
+   public SoundEvent getHurtSound(DamageSource ds) {
+      return (SoundEvent)ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("arphex:heartbeats"));
+   }
+
+   public SoundEvent getDeathSound() {
+      return (SoundEvent)ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
+   }
+
+   public boolean causeFallDamage(float l, float d, DamageSource source) {
+      return false;
+   }
+
+   public boolean hurt(DamageSource source, float amount) {
+      TormentorInitialEntityIsHurtProcedure.execute(this);
+      if (source.is(DamageTypes.IN_FIRE)) {
+         return false;
+      } else if (source.getDirectEntity() instanceof Player) {
+         return false;
+      } else if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud) {
+         return false;
+      } else if (source.is(DamageTypes.FALL)) {
+         return false;
+      } else if (source.is(DamageTypes.CACTUS)) {
+         return false;
+      } else if (source.is(DamageTypes.DROWN)) {
+         return false;
+      } else if (source.is(DamageTypes.LIGHTNING_BOLT)) {
+         return false;
+      } else if (source.is(DamageTypes.EXPLOSION)) {
+         return false;
+      } else if (source.is(DamageTypes.TRIDENT)) {
+         return false;
+      } else if (source.is(DamageTypes.FALLING_ANVIL)) {
+         return false;
+      } else if (source.is(DamageTypes.DRAGON_BREATH)) {
+         return false;
+      } else if (source.is(DamageTypes.WITHER)) {
+         return false;
+      } else {
+         return source.is(DamageTypes.WITHER_SKULL) ? false : super.hurt(source, amount);
+      }
+   }
+
+   public SpawnGroupData finalizeSpawn(
+      ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag
+   ) {
+      SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
+      EnormousSpiderHallucinationOnInitialEntitySpawnProcedure.execute(this);
+      return retval;
+   }
+
+   public void addAdditionalSaveData(CompoundTag compound) {
+      super.addAdditionalSaveData(compound);
+      compound.putString("Texture", this.getTexture());
+      compound.putInt("Datatormenttimer", (Integer)this.entityData.get(DATA_tormenttimer));
+      compound.putString("Datatormentcycle", (String)this.entityData.get(DATA_tormentcycle));
+   }
+
+   public void readAdditionalSaveData(CompoundTag compound) {
+      super.readAdditionalSaveData(compound);
+      if (compound.contains("Texture")) {
+         this.setTexture(compound.getString("Texture"));
+      }
+
+      if (compound.contains("Datatormenttimer")) {
+         this.entityData.set(DATA_tormenttimer, compound.getInt("Datatormenttimer"));
+      }
+
+      if (compound.contains("Datatormentcycle")) {
+         this.entityData.set(DATA_tormentcycle, compound.getString("Datatormentcycle"));
+      }
+   }
+
+   public void baseTick() {
+      super.baseTick();
+      TormentorInitialOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
+      this.refreshDimensions();
+   }
+
+   public EntityDimensions getDimensions(Pose p_33597_) {
+      return super.getDimensions(p_33597_).scale(1.0F);
+   }
+
+   public boolean isPushable() {
+      return false;
+   }
+
+   protected void doPush(Entity entityIn) {
+   }
+
+   protected void pushEntities() {
+   }
+
+   protected void checkFallDamage(double y, boolean onGroundIn, BlockState state, BlockPos pos) {
+   }
+
+   public void setNoGravity(boolean ignored) {
+      super.setNoGravity(true);
+   }
+
+   public void aiStep() {
+      super.aiStep();
+      this.setNoGravity(true);
+   }
+
+   public static void init() {
+      SpawnPlacements.register(
+         (EntityType)ArphexModEntities.TORMENTOR_INITIAL.get(), Type.ON_GROUND, Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+            int x = pos.getX();
+            int y = pos.getY();
+            int z = pos.getZ();
+            return TormentorSpawnConditionProcedure.execute(world);
+         }
+      );
+   }
+
+   public static Builder createAttributes() {
+      Builder builder = Mob.createMobAttributes();
+      builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
+      builder = builder.add(Attributes.MAX_HEALTH, 1024.0);
+      builder = builder.add(Attributes.ARMOR, 100.0);
+      builder = builder.add(Attributes.ATTACK_DAMAGE, 70.0);
+      builder = builder.add(Attributes.FOLLOW_RANGE, 500.0);
+      builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 10.0);
+      builder = builder.add(Attributes.ATTACK_KNOCKBACK, 20.0);
+      return builder.add(Attributes.FLYING_SPEED, 0.3);
+   }
+
+   private PlayState movementPredicate(AnimationState event) {
+      if (this.animationprocedure.equals("empty")) {
+         if (this.isDeadOrDying()) {
+            return event.setAndContinue(RawAnimation.begin().thenPlay("animation.tormentor.death"));
+         } else if (this.isShiftKeyDown()) {
+            return event.setAndContinue(RawAnimation.begin().thenLoop("animation.tormentor.fold"));
+         } else {
+            return this.isSprinting()
+               ? event.setAndContinue(RawAnimation.begin().thenLoop("animation.tormentor.splay"))
+               : event.setAndContinue(RawAnimation.begin().thenLoop("animation.tormentor.idle"));
+         }
+      } else {
+         return PlayState.STOP;
+      }
+   }
+
+   private PlayState procedurePredicate(AnimationState event) {
+      if (!this.animationprocedure.equals("empty") && event.getController().getAnimationState() == State.STOPPED) {
+         event.getController().setAnimation(RawAnimation.begin().thenPlay(this.animationprocedure));
+         if (event.getController().getAnimationState() == State.STOPPED) {
+            this.animationprocedure = "empty";
+            event.getController().forceAnimationReset();
+         }
+      } else if (this.animationprocedure.equals("empty")) {
+         return PlayState.STOP;
+      }
+
+      return PlayState.CONTINUE;
+   }
+
+   protected void tickDeath() {
+      this.deathTime++;
+      if (this.deathTime == 1252) {
+         this.remove(RemovalReason.KILLED);
+         this.dropExperience();
+      }
+   }
+
+   public String getSyncedAnimation() {
+      return (String)this.entityData.get(ANIMATION);
+   }
+
+   public void setAnimation(String animation) {
+      this.entityData.set(ANIMATION, animation);
+   }
+
+   public void registerControllers(ControllerRegistrar data) {
+      data.add(new AnimationController[]{new AnimationController(this, "movement", 60, this::movementPredicate)});
+      data.add(new AnimationController[]{new AnimationController(this, "procedure", 60, this::procedurePredicate)});
+   }
+
+   public AnimatableInstanceCache getAnimatableInstanceCache() {
+      return this.cache;
+   }
+}

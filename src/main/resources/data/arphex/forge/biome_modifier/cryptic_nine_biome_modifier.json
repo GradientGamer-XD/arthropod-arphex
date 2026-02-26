@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "arphex:cryptic_complex",
+  "features": "arphex:cryptic_nine",
+  "step": "strongholds"
+}

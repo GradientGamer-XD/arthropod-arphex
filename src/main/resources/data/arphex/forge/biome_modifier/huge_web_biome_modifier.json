@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "arphex:webbed_wasteland",
+  "features": "arphex:huge_web",
+  "step": "strongholds"
+}

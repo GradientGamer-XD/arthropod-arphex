@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "group": "spidermoth",
+  "category": "misc",
+  "experience": 5,
+  "cookingtime": 1000,
+  "ingredient": {
+    "item": "arphex:scorched_sand"
+  },
+  "result": "arphex:scorched_glass"
+}

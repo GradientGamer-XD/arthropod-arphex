@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "arphex:block/warpmanifold",
+    "top": "arphex:block/warpmanifold",
+    "side": "arphex:block/warpmanifold"
+  },
+  "render_type": "translucent"
+}

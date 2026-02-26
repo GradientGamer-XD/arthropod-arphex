@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "arphex:cryptic_complex",
+  "features": "arphex:mysterious_cube",
+  "step": "top_layer_modification"
+}
