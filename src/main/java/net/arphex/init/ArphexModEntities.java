@@ -197,7 +197,7 @@ public class ArphexModEntities {
    public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, "arphex");
    public static final RegistryObject<EntityType<SpiderMothDwellerEntity>> DRACONIC_VOIDLASHER = register(
       "draconic_voidlasher",
-      Builder.of(SpiderMothDwellerEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderMothDwellerEntity>of(SpiderMothDwellerEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(200)
          .setUpdateInterval(3)
@@ -207,7 +207,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderMothLarvaeEntity>> SPIDER_MOTH_LARVAE = register(
       "spider_moth_larvae",
-      Builder.of(SpiderMothLarvaeEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderMothLarvaeEntity>of(SpiderMothLarvaeEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(74)
          .setUpdateInterval(3)
@@ -217,7 +217,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TeleportGhostEntity>> TELEPORT_GHOST = register(
       "teleport_ghost",
-      Builder.of(TeleportGhostEntity::new, MobCategory.MONSTER)
+      Builder.<TeleportGhostEntity>of(TeleportGhostEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -227,7 +227,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<MothShadowCloneEntity>> MOTH_SHADOW_CLONE = register(
       "moth_shadow_clone",
-      Builder.of(MothShadowCloneEntity::new, MobCategory.MONSTER)
+      Builder.<MothShadowCloneEntity>of(MothShadowCloneEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(100)
          .setUpdateInterval(3)
@@ -237,7 +237,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderLarvaeEntity>> SPIDER_LARVAE = register(
       "spider_larvae",
-      Builder.of(SpiderLarvaeEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderLarvaeEntity>of(SpiderLarvaeEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(6)
          .setUpdateInterval(3)
@@ -246,7 +246,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderLarvaeTinyEntity>> SPIDER_LARVAE_TINY = register(
       "spider_larvae_tiny",
-      Builder.of(SpiderLarvaeTinyEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderLarvaeTinyEntity>of(SpiderLarvaeTinyEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -255,7 +255,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<LongLegsEntity>> LONG_LEGS = register(
       "long_legs",
-      Builder.of(LongLegsEntity::new, MobCategory.MONSTER)
+      Builder.<LongLegsEntity>of(LongLegsEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -264,7 +264,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<LongLegsTinyEntity>> LONG_LEGS_TINY = register(
       "long_legs_tiny",
-      Builder.of(LongLegsTinyEntity::new, MobCategory.MONSTER)
+      Builder.<LongLegsTinyEntity>of(LongLegsTinyEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -273,7 +273,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<DwellerSleepSpawnerEntity>> DWELLER_SLEEP_SPAWNER = register(
       "dweller_sleep_spawner",
-      Builder.of(DwellerSleepSpawnerEntity::new, MobCategory.MONSTER)
+      Builder.<DwellerSleepSpawnerEntity>of(DwellerSleepSpawnerEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -283,7 +283,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<CentipedeStalkerEntity>> CENTIPEDE_STALKER = register(
       "centipede_stalker",
-      Builder.of(CentipedeStalkerEntity::new, MobCategory.MONSTER)
+      Builder.<CentipedeStalkerEntity>of(CentipedeStalkerEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(80)
          .setUpdateInterval(3)
@@ -292,7 +292,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<BloodWormEntity>> BLOOD_WORM = register(
       "blood_worm",
-      Builder.of(BloodWormEntity::new, MobCategory.MONSTER)
+      Builder.<BloodWormEntity>of(BloodWormEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(60)
          .setUpdateInterval(3)
@@ -301,7 +301,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<BeetleTickMiteEntity>> BEETLE_TICK_MITE = register(
       "beetle_tick_mite",
-      Builder.of(BeetleTickMiteEntity::new, MobCategory.MONSTER)
+      Builder.<BeetleTickMiteEntity>of(BeetleTickMiteEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -310,7 +310,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<PureStalkingEntity>> PURE_STALKING = register(
       "pure_stalking",
-      Builder.of(PureStalkingEntity::new, MobCategory.MONSTER)
+      Builder.<PureStalkingEntity>of(PureStalkingEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(120)
          .setUpdateInterval(3)
@@ -320,7 +320,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<RushScareEntity>> RUSH_SCARE = register(
       "rush_scare",
-      Builder.of(RushScareEntity::new, MobCategory.MONSTER)
+      Builder.<RushScareEntity>of(RushScareEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(120)
          .setUpdateInterval(3)
@@ -330,7 +330,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderBroodEntity>> SPIDER_BROOD = register(
       "spider_brood",
-      Builder.of(SpiderBroodEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderBroodEntity>of(SpiderBroodEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -339,7 +339,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderBroodEntityProjectile>> SPIDER_BROOD_PROJECTILE = register(
       "projectile_spider_brood",
-      Builder.of(SpiderBroodEntityProjectile::new, MobCategory.MISC)
+      Builder.<SpiderBroodEntityProjectile>of(SpiderBroodEntityProjectile::new, MobCategory.MISC)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(1)
@@ -348,7 +348,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SkyStalkerEntity>> SKY_STALKER = register(
       "sky_stalker",
-      Builder.of(SkyStalkerEntity::new, MobCategory.MONSTER)
+      Builder.<SkyStalkerEntity>of(SkyStalkerEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(50)
          .setUpdateInterval(3)
@@ -358,7 +358,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderFlatEntity>> SPIDER_FLAT = register(
       "spider_flat",
-      Builder.of(SpiderFlatEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderFlatEntity>of(SpiderFlatEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(80)
          .setUpdateInterval(3)
@@ -367,7 +367,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<WebbedArrowEntity>> WEBBED_ARROW = register(
       "webbed_arrow",
-      Builder.of(WebbedArrowEntity::new, MobCategory.MISC)
+      Builder.<WebbedArrowEntity>of(WebbedArrowEntity::new, MobCategory.MISC)
          .setCustomClientFactory(WebbedArrowEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -376,7 +376,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<CentipedeEvictorEntity>> CENTIPEDE_EVICTOR = register(
       "centipede_evictor",
-      Builder.of(CentipedeEvictorEntity::new, MobCategory.MONSTER)
+      Builder.<CentipedeEvictorEntity>of(CentipedeEvictorEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(60)
          .setUpdateInterval(3)
@@ -386,7 +386,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<CentipedeEvictorLarvaeEntity>> CENTIPEDE_EVICTOR_LARVAE = register(
       "centipede_evictor_larvae",
-      Builder.of(CentipedeEvictorLarvaeEntity::new, MobCategory.MONSTER)
+      Builder.<CentipedeEvictorLarvaeEntity>of(CentipedeEvictorLarvaeEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(60)
          .setUpdateInterval(3)
@@ -396,7 +396,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TinyCentipedeBreacherEntity>> TINY_CENTIPEDE_BREACHER = register(
       "tiny_centipede_breacher",
-      Builder.of(TinyCentipedeBreacherEntity::new, MobCategory.MONSTER)
+      Builder.<TinyCentipedeBreacherEntity>of(TinyCentipedeBreacherEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(60)
          .setUpdateInterval(3)
@@ -406,7 +406,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderLurkerEntity>> SPIDER_LURKER = register(
       "spider_lurker",
-      Builder.of(SpiderLurkerEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderLurkerEntity>of(SpiderLurkerEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(60)
          .setUpdateInterval(3)
@@ -415,7 +415,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<InvisibleStalkerEntity>> INVISIBLE_STALKER = register(
       "invisible_stalker",
-      Builder.of(InvisibleStalkerEntity::new, MobCategory.MONSTER)
+      Builder.<InvisibleStalkerEntity>of(InvisibleStalkerEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(300)
          .setUpdateInterval(3)
@@ -425,7 +425,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderFunnelEntity>> SPIDER_FUNNEL = register(
       "spider_funnel",
-      Builder.of(SpiderFunnelEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderFunnelEntity>of(SpiderFunnelEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -434,7 +434,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<WebHookEntity>> WEB_HOOK = register(
       "web_hook",
-      Builder.of(WebHookEntity::new, MobCategory.MISC)
+      Builder.<WebHookEntity>of(WebHookEntity::new, MobCategory.MISC)
          .setCustomClientFactory(WebHookEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -443,7 +443,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<WebHarnessEntity>> WEB_HARNESS = register(
       "web_harness",
-      Builder.of(WebHarnessEntity::new, MobCategory.MONSTER)
+      Builder.<WebHarnessEntity>of(WebHarnessEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -453,7 +453,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<WebRopeEntity>> WEB_ROPE = register(
       "web_rope",
-      Builder.of(WebRopeEntity::new, MobCategory.MISC)
+      Builder.<WebRopeEntity>of(WebRopeEntity::new, MobCategory.MISC)
          .setCustomClientFactory(WebRopeEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -462,7 +462,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<WebFunnelEntity>> WEB_FUNNEL = register(
       "web_funnel",
-      Builder.of(WebFunnelEntity::new, MobCategory.MONSTER)
+      Builder.<WebFunnelEntity>of(WebFunnelEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(50)
          .setUpdateInterval(3)
@@ -471,7 +471,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderGoliathEntity>> SPIDER_GOLIATH = register(
       "spider_goliath",
-      Builder.of(SpiderGoliathEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderGoliathEntity>of(SpiderGoliathEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -480,7 +480,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SilverfishSpectreEntity>> SILVERFISH_SPECTRE = register(
       "silverfish_spectre",
-      Builder.of(SilverfishSpectreEntity::new, MobCategory.MONSTER)
+      Builder.<SilverfishSpectreEntity>of(SilverfishSpectreEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(20)
          .setUpdateInterval(3)
@@ -489,7 +489,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<PowerHookEntity>> POWER_HOOK = register(
       "power_hook",
-      Builder.of(PowerHookEntity::new, MobCategory.MISC)
+      Builder.<PowerHookEntity>of(PowerHookEntity::new, MobCategory.MISC)
          .setCustomClientFactory(PowerHookEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -498,7 +498,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TamedTarantulaEntity>> TAMED_TARANTULA = register(
       "tamed_tarantula",
-      Builder.of(TamedTarantulaEntity::new, MobCategory.MONSTER)
+      Builder.<TamedTarantulaEntity>of(TamedTarantulaEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -507,7 +507,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<HornetHarbingerEntity>> HORNET_HARBINGER = register(
       "hornet_harbinger",
-      Builder.of(HornetHarbingerEntity::new, MobCategory.MONSTER)
+      Builder.<HornetHarbingerEntity>of(HornetHarbingerEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(70)
          .setUpdateInterval(3)
@@ -516,7 +516,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<HornetHarbingerGiantEntity>> HORNET_HARBINGER_GIANT = register(
       "hornet_harbinger_giant",
-      Builder.of(HornetHarbingerGiantEntity::new, MobCategory.MONSTER)
+      Builder.<HornetHarbingerGiantEntity>of(HornetHarbingerGiantEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(70)
          .setUpdateInterval(3)
@@ -525,7 +525,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<MosquitoMorbidityEntity>> MOSQUITO_MORBIDITY = register(
       "mosquito_morbidity",
-      Builder.of(MosquitoMorbidityEntity::new, MobCategory.MONSTER)
+      Builder.<MosquitoMorbidityEntity>of(MosquitoMorbidityEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(20)
          .setUpdateInterval(3)
@@ -534,7 +534,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderMothSummonEntity>> SPIDER_MOTH_SUMMON = register(
       "spider_moth_summon",
-      Builder.of(SpiderMothSummonEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderMothSummonEntity>of(SpiderMothSummonEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(70)
          .setUpdateInterval(3)
@@ -544,7 +544,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<LongLegsFlyEntity>> LONG_LEGS_FLY = register(
       "long_legs_fly",
-      Builder.of(LongLegsFlyEntity::new, MobCategory.MONSTER)
+      Builder.<LongLegsFlyEntity>of(LongLegsFlyEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(20)
          .setUpdateInterval(3)
@@ -553,7 +553,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<ScorpioidBloodlusterEntity>> SCORPIOID_BLOODLUSTER = register(
       "scorpioid_bloodluster",
-      Builder.of(ScorpioidBloodlusterEntity::new, MobCategory.MONSTER)
+      Builder.<ScorpioidBloodlusterEntity>of(ScorpioidBloodlusterEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(200)
          .setUpdateInterval(3)
@@ -563,7 +563,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<BloodthirstyTendrilEntity>> BLOODTHIRSTY_TENDRIL = register(
       "bloodthirsty_tendril",
-      Builder.of(BloodthirstyTendrilEntity::new, MobCategory.MISC)
+      Builder.<BloodthirstyTendrilEntity>of(BloodthirstyTendrilEntity::new, MobCategory.MISC)
          .setCustomClientFactory(BloodthirstyTendrilEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -572,7 +572,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<ScorpioidCloneEntity>> SCORPIOID_CLONE = register(
       "scorpioid_clone",
-      Builder.of(ScorpioidCloneEntity::new, MobCategory.MONSTER)
+      Builder.<ScorpioidCloneEntity>of(ScorpioidCloneEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(130)
          .setUpdateInterval(3)
@@ -582,7 +582,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<ScorpioidInitialEntity>> SCORPIOID_INITIAL = register(
       "scorpioid_initial",
-      Builder.of(ScorpioidInitialEntity::new, MobCategory.MONSTER)
+      Builder.<ScorpioidInitialEntity>of(ScorpioidInitialEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -592,7 +592,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderMothSummonLarvaeEntity>> SPIDER_MOTH_SUMMON_LARVAE = register(
       "spider_moth_summon_larvae",
-      Builder.of(SpiderMothSummonLarvaeEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderMothSummonLarvaeEntity>of(SpiderMothSummonLarvaeEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(74)
          .setUpdateInterval(3)
@@ -602,7 +602,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<ScorpioidChaserHallucinationEntity>> SCORPIOID_CHASER_HALLUCINATION = register(
       "scorpioid_chaser_hallucination",
-      Builder.of(ScorpioidChaserHallucinationEntity::new, MobCategory.MONSTER)
+      Builder.<ScorpioidChaserHallucinationEntity>of(ScorpioidChaserHallucinationEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(130)
          .setUpdateInterval(3)
@@ -612,7 +612,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<InvisibleArrowEntity>> INVISIBLE_ARROW = register(
       "invisible_arrow",
-      Builder.of(InvisibleArrowEntity::new, MobCategory.MISC)
+      Builder.<InvisibleArrowEntity>of(InvisibleArrowEntity::new, MobCategory.MISC)
          .setCustomClientFactory(InvisibleArrowEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -621,7 +621,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<RepellantEntity>> REPELLANT = register(
       "repellant",
-      Builder.of(RepellantEntity::new, MobCategory.MONSTER)
+      Builder.<RepellantEntity>of(RepellantEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -631,7 +631,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<AoEflameEntity>> AO_EFLAME = register(
       "ao_eflame",
-      Builder.of(AoEflameEntity::new, MobCategory.MISC)
+      Builder.<AoEflameEntity>of(AoEflameEntity::new, MobCategory.MISC)
          .setCustomClientFactory(AoEflameEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -640,7 +640,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<AoEflame2Entity>> AO_EFLAME_2 = register(
       "ao_eflame_2",
-      Builder.of(AoEflame2Entity::new, MobCategory.MISC)
+      Builder.<AoEflame2Entity>of(AoEflame2Entity::new, MobCategory.MISC)
          .setCustomClientFactory(AoEflame2Entity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -649,7 +649,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<AntArsonistEntity>> ANT_ARSONIST = register(
       "ant_arsonist",
-      Builder.of(AntArsonistEntity::new, MobCategory.MONSTER)
+      Builder.<AntArsonistEntity>of(AntArsonistEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(20)
          .setUpdateInterval(3)
@@ -659,7 +659,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<LocustLandscourgeEntity>> LOCUST_LANDSCOURGE = register(
       "locust_landscourge",
-      Builder.of(LocustLandscourgeEntity::new, MobCategory.MONSTER)
+      Builder.<LocustLandscourgeEntity>of(LocustLandscourgeEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(20)
          .setUpdateInterval(3)
@@ -668,7 +668,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<WebHarnessDownEntity>> WEB_HARNESS_DOWN = register(
       "web_harness_down",
-      Builder.of(WebHarnessDownEntity::new, MobCategory.MONSTER)
+      Builder.<WebHarnessDownEntity>of(WebHarnessDownEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -678,7 +678,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderProwlerEntity>> SPIDER_PROWLER = register(
       "spider_prowler",
-      Builder.of(SpiderProwlerEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderProwlerEntity>of(SpiderProwlerEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(120)
          .setUpdateInterval(3)
@@ -687,7 +687,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<GiantWebEntity>> GIANT_WEB = register(
       "giant_web",
-      Builder.of(GiantWebEntity::new, MobCategory.MONSTER)
+      Builder.<GiantWebEntity>of(GiantWebEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -696,7 +696,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderJumpEntity>> SPIDER_JUMP = register(
       "spider_jump",
-      Builder.of(SpiderJumpEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderJumpEntity>of(SpiderJumpEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(80)
          .setUpdateInterval(3)
@@ -705,7 +705,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<FlyFestererEntity>> FLY_FESTERER = register(
       "fly_festerer",
-      Builder.of(FlyFestererEntity::new, MobCategory.MONSTER)
+      Builder.<FlyFestererEntity>of(FlyFestererEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(10)
          .setUpdateInterval(3)
@@ -714,7 +714,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<DisappearInvisibleEntity>> DISAPPEAR_INVISIBLE = register(
       "disappear_invisible",
-      Builder.of(DisappearInvisibleEntity::new, MobCategory.MISC)
+      Builder.<DisappearInvisibleEntity>of(DisappearInvisibleEntity::new, MobCategory.MISC)
          .setCustomClientFactory(DisappearInvisibleEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -723,7 +723,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderMothEntity>> SPIDER_MOTH = register(
       "spider_moth",
-      Builder.of(SpiderMothEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderMothEntity>of(SpiderMothEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(130)
          .setUpdateInterval(3)
@@ -733,7 +733,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<ScorpioidShadowCloneEntity>> SCORPIOID_SHADOW_CLONE = register(
       "scorpioid_shadow_clone",
-      Builder.of(ScorpioidShadowCloneEntity::new, MobCategory.MONSTER)
+      Builder.<ScorpioidShadowCloneEntity>of(ScorpioidShadowCloneEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(100)
          .setUpdateInterval(3)
@@ -743,7 +743,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<ButterflyBewitcherGiantEntity>> BUTTERFLY_BEWITCHER_GIANT = register(
       "butterfly_bewitcher_giant",
-      Builder.of(ButterflyBewitcherGiantEntity::new, MobCategory.MONSTER)
+      Builder.<ButterflyBewitcherGiantEntity>of(ButterflyBewitcherGiantEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(60)
          .setUpdateInterval(3)
@@ -752,7 +752,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<MillipedeMarauderEntity>> MILLIPEDE_MARAUDER = register(
       "millipede_marauder",
-      Builder.of(MillipedeMarauderEntity::new, MobCategory.MONSTER)
+      Builder.<MillipedeMarauderEntity>of(MillipedeMarauderEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(80)
          .setUpdateInterval(3)
@@ -761,7 +761,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<MaggotLarvaeEntity>> MAGGOT_LARVAE = register(
       "maggot_larvae",
-      Builder.of(MaggotLarvaeEntity::new, MobCategory.MONSTER)
+      Builder.<MaggotLarvaeEntity>of(MaggotLarvaeEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(6)
          .setUpdateInterval(3)
@@ -770,7 +770,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<RoachRiverspawnEntity>> ROACH_RIVERSPAWN = register(
       "roach_riverspawn",
-      Builder.of(RoachRiverspawnEntity::new, MobCategory.MONSTER)
+      Builder.<RoachRiverspawnEntity>of(RoachRiverspawnEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -780,7 +780,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<BloodProjectileEntity>> BLOOD_PROJECTILE = register(
       "blood_projectile",
-      Builder.of(BloodProjectileEntity::new, MobCategory.MISC)
+      Builder.<BloodProjectileEntity>of(BloodProjectileEntity::new, MobCategory.MISC)
          .setCustomClientFactory(BloodProjectileEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -789,7 +789,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<DraconFireEntity>> DRACON_FIRE = register(
       "dracon_fire",
-      Builder.of(DraconFireEntity::new, MobCategory.MISC)
+      Builder.<DraconFireEntity>of(DraconFireEntity::new, MobCategory.MISC)
          .setCustomClientFactory(DraconFireEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -798,7 +798,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<HomingVoidseekerEntity>> HOMING_VOIDSEEKER = register(
       "homing_voidseeker",
-      Builder.of(HomingVoidseekerEntity::new, MobCategory.MISC)
+      Builder.<HomingVoidseekerEntity>of(HomingVoidseekerEntity::new, MobCategory.MISC)
          .setCustomClientFactory(HomingVoidseekerEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -807,7 +807,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<DraconicCloneEntity>> DRACONIC_CLONE = register(
       "draconic_clone",
-      Builder.of(DraconicCloneEntity::new, MobCategory.MONSTER)
+      Builder.<DraconicCloneEntity>of(DraconicCloneEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(200)
          .setUpdateInterval(3)
@@ -817,7 +817,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<VoidSpearEntity>> VOID_SPEAR = register(
       "void_spear",
-      Builder.of(VoidSpearEntity::new, MobCategory.MISC)
+      Builder.<VoidSpearEntity>of(VoidSpearEntity::new, MobCategory.MISC)
          .setCustomClientFactory(VoidSpearEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -826,7 +826,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<ButterflyBewitcherEntity>> BUTTERFLY_BEWITCHER = register(
       "butterfly_bewitcher",
-      Builder.of(ButterflyBewitcherEntity::new, MobCategory.MONSTER)
+      Builder.<ButterflyBewitcherEntity>of(ButterflyBewitcherEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(60)
          .setUpdateInterval(3)
@@ -835,7 +835,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<DragonflyDreadnoughtEntity>> DRAGONFLY_DREADNOUGHT = register(
       "dragonfly_dreadnought",
-      Builder.of(DragonflyDreadnoughtEntity::new, MobCategory.MONSTER)
+      Builder.<DragonflyDreadnoughtEntity>of(DragonflyDreadnoughtEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -844,7 +844,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<VoidlasherShadowCloneEntity>> VOIDLASHER_SHADOW_CLONE = register(
       "voidlasher_shadow_clone",
-      Builder.of(VoidlasherShadowCloneEntity::new, MobCategory.MONSTER)
+      Builder.<VoidlasherShadowCloneEntity>of(VoidlasherShadowCloneEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(100)
          .setUpdateInterval(3)
@@ -854,7 +854,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderSnatcherEntity>> SPIDER_SNATCHER = register(
       "spider_snatcher",
-      Builder.of(SpiderSnatcherEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderSnatcherEntity>of(SpiderSnatcherEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(80)
          .setUpdateInterval(3)
@@ -863,7 +863,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<CrabConstrictorEntity>> CRAB_CONSTRICTOR = register(
       "crab_constrictor",
-      Builder.of(CrabConstrictorEntity::new, MobCategory.MONSTER)
+      Builder.<CrabConstrictorEntity>of(CrabConstrictorEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(160)
          .setUpdateInterval(3)
@@ -873,7 +873,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<MothMoontrackerEntity>> MOTH_MOONTRACKER = register(
       "moth_moontracker",
-      Builder.of(MothMoontrackerEntity::new, MobCategory.MONSTER)
+      Builder.<MothMoontrackerEntity>of(MothMoontrackerEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(70)
          .setUpdateInterval(3)
@@ -882,7 +882,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<ScorpionStrikerEntity>> SCORPION_STRIKER = register(
       "scorpion_striker",
-      Builder.of(ScorpionStrikerEntity::new, MobCategory.MONSTER)
+      Builder.<ScorpionStrikerEntity>of(ScorpionStrikerEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -892,7 +892,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<ScorpionLarvaeEntity>> SCORPION_LARVAE = register(
       "scorpion_larvae",
-      Builder.of(ScorpionLarvaeEntity::new, MobCategory.MONSTER)
+      Builder.<ScorpionLarvaeEntity>of(ScorpionLarvaeEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -902,7 +902,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<RandomArPhExEntity>> RANDOM_AR_PH_EX = register(
       "random_ar_ph_ex",
-      Builder.of(RandomArPhExEntity::new, MobCategory.MONSTER)
+      Builder.<RandomArPhExEntity>of(RandomArPhExEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -911,7 +911,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SmallWebEntity>> SMALL_WEB = register(
       "small_web",
-      Builder.of(SmallWebEntity::new, MobCategory.MONSTER)
+      Builder.<SmallWebEntity>of(SmallWebEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -920,7 +920,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SolifugeSkulkerEntity>> SOLIFUGE_SKULKER = register(
       "solifuge_skulker",
-      Builder.of(SolifugeSkulkerEntity::new, MobCategory.MONSTER)
+      Builder.<SolifugeSkulkerEntity>of(SolifugeSkulkerEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(120)
          .setUpdateInterval(3)
@@ -929,7 +929,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<OpalArrowEntity>> OPAL_ARROW = register(
       "opal_arrow",
-      Builder.of(OpalArrowEntity::new, MobCategory.MISC)
+      Builder.<OpalArrowEntity>of(OpalArrowEntity::new, MobCategory.MISC)
          .setCustomClientFactory(OpalArrowEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -938,7 +938,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<EnormousSpiderHallucinationEntity>> ENORMOUS_SPIDER_HALLUCINATION = register(
       "enormous_spider_hallucination",
-      Builder.of(EnormousSpiderHallucinationEntity::new, MobCategory.MONSTER)
+      Builder.<EnormousSpiderHallucinationEntity>of(EnormousSpiderHallucinationEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(300)
          .setUpdateInterval(3)
@@ -948,7 +948,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<CrabLarvaeEntity>> CRAB_LARVAE = register(
       "crab_larvae",
-      Builder.of(CrabLarvaeEntity::new, MobCategory.MONSTER)
+      Builder.<CrabLarvaeEntity>of(CrabLarvaeEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(70)
          .setUpdateInterval(3)
@@ -958,7 +958,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<AbyssExplosiveEntity>> ABYSS_EXPLOSIVE = register(
       "abyss_explosive",
-      Builder.of(AbyssExplosiveEntity::new, MobCategory.MISC)
+      Builder.<AbyssExplosiveEntity>of(AbyssExplosiveEntity::new, MobCategory.MISC)
          .setCustomClientFactory(AbyssExplosiveEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -967,7 +967,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<JudgementBlastEntity>> JUDGEMENT_BLAST = register(
       "judgement_blast",
-      Builder.of(JudgementBlastEntity::new, MobCategory.MISC)
+      Builder.<JudgementBlastEntity>of(JudgementBlastEntity::new, MobCategory.MISC)
          .setCustomClientFactory(JudgementBlastEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -976,7 +976,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<DraconicFlyStalkEntity>> DRACONIC_FLY_STALK = register(
       "draconic_fly_stalk",
-      Builder.of(DraconicFlyStalkEntity::new, MobCategory.MONSTER)
+      Builder.<DraconicFlyStalkEntity>of(DraconicFlyStalkEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(200)
          .setUpdateInterval(3)
@@ -986,7 +986,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<VortexBlastEntity>> VORTEX_BLAST = register(
       "vortex_blast",
-      Builder.of(VortexBlastEntity::new, MobCategory.MISC)
+      Builder.<VortexBlastEntity>of(VortexBlastEntity::new, MobCategory.MISC)
          .setCustomClientFactory(VortexBlastEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -995,7 +995,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<BeetleBulwarkEntity>> BEETLE_BULWARK = register(
       "beetle_bulwark",
-      Builder.of(BeetleBulwarkEntity::new, MobCategory.MONSTER)
+      Builder.<BeetleBulwarkEntity>of(BeetleBulwarkEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1005,7 +1005,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<ScarabSummonEntity>> SCARAB_SUMMON = register(
       "scarab_summon",
-      Builder.of(ScarabSummonEntity::new, MobCategory.MONSTER)
+      Builder.<ScarabSummonEntity>of(ScarabSummonEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1014,7 +1014,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderReaperEntity>> SPIDER_REAPER = register(
       "spider_reaper",
-      Builder.of(SpiderReaperEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderReaperEntity>of(SpiderReaperEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(120)
          .setUpdateInterval(3)
@@ -1023,7 +1023,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<DungeonTriggerEntity>> DUNGEON_TRIGGER = register(
       "dungeon_trigger",
-      Builder.of(DungeonTriggerEntity::new, MobCategory.MONSTER)
+      Builder.<DungeonTriggerEntity>of(DungeonTriggerEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1032,7 +1032,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<AntArsonistWorkerEntity>> ANT_ARSONIST_WORKER = register(
       "ant_arsonist_worker",
-      Builder.of(AntArsonistWorkerEntity::new, MobCategory.MONSTER)
+      Builder.<AntArsonistWorkerEntity>of(AntArsonistWorkerEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(60)
          .setUpdateInterval(3)
@@ -1042,7 +1042,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<AntArsonistSoldierEntity>> ANT_ARSONIST_SOLDIER = register(
       "ant_arsonist_soldier",
-      Builder.of(AntArsonistSoldierEntity::new, MobCategory.MONSTER)
+      Builder.<AntArsonistSoldierEntity>of(AntArsonistSoldierEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(60)
          .setUpdateInterval(3)
@@ -1052,7 +1052,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<AntArsonistAlateQueenEntity>> ANT_ARSONIST_ALATE_QUEEN = register(
       "ant_arsonist_alate_queen",
-      Builder.of(AntArsonistAlateQueenEntity::new, MobCategory.MONSTER)
+      Builder.<AntArsonistAlateQueenEntity>of(AntArsonistAlateQueenEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(60)
          .setUpdateInterval(3)
@@ -1062,7 +1062,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<AntArsonistDroneEntity>> ANT_ARSONIST_DRONE = register(
       "ant_arsonist_drone",
-      Builder.of(AntArsonistDroneEntity::new, MobCategory.MONSTER)
+      Builder.<AntArsonistDroneEntity>of(AntArsonistDroneEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(60)
          .setUpdateInterval(3)
@@ -1072,7 +1072,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TermiteTunnelerWorkerEntity>> TERMITE_TUNNELER_WORKER = register(
       "termite_tunneler_worker",
-      Builder.of(TermiteTunnelerWorkerEntity::new, MobCategory.MONSTER)
+      Builder.<TermiteTunnelerWorkerEntity>of(TermiteTunnelerWorkerEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(60)
          .setUpdateInterval(3)
@@ -1081,7 +1081,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TermiteTunnelerSoldierEntity>> TERMITE_TUNNELER_SOLDIER = register(
       "termite_tunneler_soldier",
-      Builder.of(TermiteTunnelerSoldierEntity::new, MobCategory.MONSTER)
+      Builder.<TermiteTunnelerSoldierEntity>of(TermiteTunnelerSoldierEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(60)
          .setUpdateInterval(3)
@@ -1090,7 +1090,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<RandomTermiteEntity>> RANDOM_TERMITE = register(
       "random_termite",
-      Builder.of(RandomTermiteEntity::new, MobCategory.MONSTER)
+      Builder.<RandomTermiteEntity>of(RandomTermiteEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1099,7 +1099,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TermiteTunnelerAlateEntity>> TERMITE_TUNNELER_ALATE = register(
       "termite_tunneler_alate",
-      Builder.of(TermiteTunnelerAlateEntity::new, MobCategory.MONSTER)
+      Builder.<TermiteTunnelerAlateEntity>of(TermiteTunnelerAlateEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(60)
          .setUpdateInterval(3)
@@ -1108,7 +1108,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TermiteTunnelerKingEntity>> TERMITE_TUNNELER_KING = register(
       "termite_tunneler_king",
-      Builder.of(TermiteTunnelerKingEntity::new, MobCategory.MONSTER)
+      Builder.<TermiteTunnelerKingEntity>of(TermiteTunnelerKingEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(60)
          .setUpdateInterval(3)
@@ -1117,7 +1117,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TermiteTunnelerQueenEntity>> TERMITE_TUNNELER_QUEEN = register(
       "termite_tunneler_queen",
-      Builder.of(TermiteTunnelerQueenEntity::new, MobCategory.MONSTER)
+      Builder.<TermiteTunnelerQueenEntity>of(TermiteTunnelerQueenEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(60)
          .setUpdateInterval(3)
@@ -1126,7 +1126,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TormentBlastEntity>> TORMENT_BLAST = register(
       "torment_blast",
-      Builder.of(TormentBlastEntity::new, MobCategory.MISC)
+      Builder.<TormentBlastEntity>of(TormentBlastEntity::new, MobCategory.MISC)
          .setCustomClientFactory(TormentBlastEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -1135,7 +1135,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TORMENTOREntity>> TORMENTOR = register(
       "tormentor",
-      Builder.of(TORMENTOREntity::new, MobCategory.MONSTER)
+      Builder.<TORMENTOREntity>of(TORMENTOREntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(500)
          .setUpdateInterval(3)
@@ -1145,7 +1145,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<MantisMutilatorEntity>> MANTIS_MUTILATOR = register(
       "mantis_mutilator",
-      Builder.of(MantisMutilatorEntity::new, MobCategory.MONSTER)
+      Builder.<MantisMutilatorEntity>of(MantisMutilatorEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(80)
          .setUpdateInterval(3)
@@ -1155,7 +1155,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TormentorInitialEntity>> TORMENTOR_INITIAL = register(
       "tormentor_initial",
-      Builder.of(TormentorInitialEntity::new, MobCategory.MONSTER)
+      Builder.<TormentorInitialEntity>of(TormentorInitialEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(500)
          .setUpdateInterval(3)
@@ -1165,7 +1165,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<CrawlingRandomEntity>> CRAWLING_RANDOM = register(
       "crawling_random",
-      Builder.of(CrawlingRandomEntity::new, MobCategory.MONSTER)
+      Builder.<CrawlingRandomEntity>of(CrawlingRandomEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1174,7 +1174,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TormentorTendrilEntity>> TORMENTOR_TENDRIL = register(
       "tormentor_tendril",
-      Builder.of(TormentorTendrilEntity::new, MobCategory.MONSTER)
+      Builder.<TormentorTendrilEntity>of(TormentorTendrilEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1184,7 +1184,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TormentorMothSummonEntity>> TORMENTOR_MOTH_SUMMON = register(
       "tormentor_moth_summon",
-      Builder.of(TormentorMothSummonEntity::new, MobCategory.MONSTER)
+      Builder.<TormentorMothSummonEntity>of(TormentorMothSummonEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(130)
          .setUpdateInterval(3)
@@ -1194,7 +1194,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TormentorScorpioidSummonEntity>> TORMENTOR_SCORPIOID_SUMMON = register(
       "tormentor_scorpioid_summon",
-      Builder.of(TormentorScorpioidSummonEntity::new, MobCategory.MONSTER)
+      Builder.<TormentorScorpioidSummonEntity>of(TormentorScorpioidSummonEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(200)
          .setUpdateInterval(3)
@@ -1204,7 +1204,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TormentorVoidlasherSummonEntity>> TORMENTOR_VOIDLASHER_SUMMON = register(
       "tormentor_voidlasher_summon",
-      Builder.of(TormentorVoidlasherSummonEntity::new, MobCategory.MONSTER)
+      Builder.<TormentorVoidlasherSummonEntity>of(TormentorVoidlasherSummonEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(200)
          .setUpdateInterval(3)
@@ -1214,7 +1214,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<WidowArrowEntity>> WIDOW_ARROW = register(
       "widow_arrow",
-      Builder.of(WidowArrowEntity::new, MobCategory.MISC)
+      Builder.<WidowArrowEntity>of(WidowArrowEntity::new, MobCategory.MISC)
          .setCustomClientFactory(WidowArrowEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -1223,7 +1223,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TormentRifleEntity>> TORMENT_RIFLE = register(
       "torment_rifle",
-      Builder.of(TormentRifleEntity::new, MobCategory.MISC)
+      Builder.<TormentRifleEntity>of(TormentRifleEntity::new, MobCategory.MISC)
          .setCustomClientFactory(TormentRifleEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -1232,7 +1232,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TormentorSummonEntity>> TORMENTOR_SUMMON = register(
       "tormentor_summon",
-      Builder.of(TormentorSummonEntity::new, MobCategory.MONSTER)
+      Builder.<TormentorSummonEntity>of(TormentorSummonEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(200)
          .setUpdateInterval(3)
@@ -1242,7 +1242,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TormentorSphereEntity>> TORMENTOR_SPHERE = register(
       "tormentor_sphere",
-      Builder.of(TormentorSphereEntity::new, MobCategory.MONSTER)
+      Builder.<TormentorSphereEntity>of(TormentorSphereEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(60)
          .setUpdateInterval(3)
@@ -1252,7 +1252,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TormentorCaterpillarEntity>> TORMENTOR_CATERPILLAR = register(
       "tormentor_caterpillar",
-      Builder.of(TormentorCaterpillarEntity::new, MobCategory.MONSTER)
+      Builder.<TormentorCaterpillarEntity>of(TormentorCaterpillarEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(200)
          .setUpdateInterval(3)
@@ -1262,7 +1262,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TormentorLarvaeEntity>> TORMENTOR_LARVAE = register(
       "tormentor_larvae",
-      Builder.of(TormentorLarvaeEntity::new, MobCategory.MONSTER)
+      Builder.<TormentorLarvaeEntity>of(TormentorLarvaeEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(200)
          .setUpdateInterval(3)
@@ -1272,7 +1272,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<MiniatureCoreEntity>> MINIATURE_CORE = register(
       "miniature_core",
-      Builder.of(MiniatureCoreEntity::new, MobCategory.MISC)
+      Builder.<MiniatureCoreEntity>of(MiniatureCoreEntity::new, MobCategory.MISC)
          .setCustomClientFactory(MiniatureCoreEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -1281,7 +1281,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SmallTormentSphereEntity>> SMALL_TORMENT_SPHERE = register(
       "small_torment_sphere",
-      Builder.of(SmallTormentSphereEntity::new, MobCategory.MONSTER)
+      Builder.<SmallTormentSphereEntity>of(SmallTormentSphereEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(650)
          .setUpdateInterval(3)
@@ -1291,7 +1291,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderInfestorEntity>> SPIDER_INFESTOR = register(
       "spider_infestor",
-      Builder.of(SpiderInfestorEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderInfestorEntity>of(SpiderInfestorEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(120)
          .setUpdateInterval(3)
@@ -1301,7 +1301,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TormentExplosiveEntity>> TORMENT_EXPLOSIVE = register(
       "torment_explosive",
-      Builder.of(TormentExplosiveEntity::new, MobCategory.MISC)
+      Builder.<TormentExplosiveEntity>of(TormentExplosiveEntity::new, MobCategory.MISC)
          .setCustomClientFactory(TormentExplosiveEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -1310,7 +1310,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TormentorLowDisplayEntity>> TORMENTOR_LOW_DISPLAY = register(
       "tormentor_low_display",
-      Builder.of(TormentorLowDisplayEntity::new, MobCategory.MONSTER)
+      Builder.<TormentorLowDisplayEntity>of(TormentorLowDisplayEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(500)
          .setUpdateInterval(3)
@@ -1320,7 +1320,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TormentorLowDisplayAnimEntity>> TORMENTOR_LOW_DISPLAY_ANIM = register(
       "tormentor_low_display_anim",
-      Builder.of(TormentorLowDisplayAnimEntity::new, MobCategory.MONSTER)
+      Builder.<TormentorLowDisplayAnimEntity>of(TormentorLowDisplayAnimEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(500)
          .setUpdateInterval(3)
@@ -1330,7 +1330,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SummonSunBlastEntity>> SUMMON_SUN_BLAST = register(
       "summon_sun_blast",
-      Builder.of(SummonSunBlastEntity::new, MobCategory.MONSTER)
+      Builder.<SummonSunBlastEntity>of(SummonSunBlastEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1340,7 +1340,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<WaspNemesisEntity>> WASP_NEMESIS = register(
       "wasp_nemesis",
-      Builder.of(WaspNemesisEntity::new, MobCategory.MONSTER)
+      Builder.<WaspNemesisEntity>of(WaspNemesisEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(110)
          .setUpdateInterval(3)
@@ -1350,7 +1350,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SegmentedBodyEntity>> SEGMENTED_BODY = register(
       "segmented_body",
-      Builder.of(SegmentedBodyEntity::new, MobCategory.MONSTER)
+      Builder.<SegmentedBodyEntity>of(SegmentedBodyEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(400)
          .setUpdateInterval(3)
@@ -1360,7 +1360,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<ArthropleuraAbominationEntity>> ARTHROPLEURA_ABOMINATION = register(
       "arthropleura_abomination",
-      Builder.of(ArthropleuraAbominationEntity::new, MobCategory.MONSTER)
+      Builder.<ArthropleuraAbominationEntity>of(ArthropleuraAbominationEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(400)
          .setUpdateInterval(3)
@@ -1370,7 +1370,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<VenusFlytrapEntity>> VENUS_FLYTRAP = register(
       "venus_flytrap",
-      Builder.of(VenusFlytrapEntity::new, MobCategory.MONSTER)
+      Builder.<VenusFlytrapEntity>of(VenusFlytrapEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1379,7 +1379,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<FlytrapEntity>> FLYTRAP = register(
       "flytrap",
-      Builder.of(FlytrapEntity::new, MobCategory.MONSTER)
+      Builder.<FlytrapEntity>of(FlytrapEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1388,7 +1388,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderAmbusherEntity>> SPIDER_AMBUSHER = register(
       "spider_ambusher",
-      Builder.of(SpiderAmbusherEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderAmbusherEntity>of(SpiderAmbusherEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(80)
          .setUpdateInterval(3)
@@ -1397,7 +1397,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpinpartitestEntity>> SPINPARTITEST = register(
       "spinpartitest",
-      Builder.of(SpinpartitestEntity::new, MobCategory.MISC)
+      Builder.<SpinpartitestEntity>of(SpinpartitestEntity::new, MobCategory.MISC)
          .setCustomClientFactory(SpinpartitestEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -1406,7 +1406,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SphereAnimEntity>> SPHERE_ANIM = register(
       "sphere_anim",
-      Builder.of(SphereAnimEntity::new, MobCategory.MONSTER)
+      Builder.<SphereAnimEntity>of(SphereAnimEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1416,7 +1416,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<AscendantArrowEntity>> ASCENDANT_ARROW = register(
       "ascendant_arrow",
-      Builder.of(AscendantArrowEntity::new, MobCategory.MISC)
+      Builder.<AscendantArrowEntity>of(AscendantArrowEntity::new, MobCategory.MISC)
          .setCustomClientFactory(AscendantArrowEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -1425,7 +1425,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SlowLookTestEntity>> SLOW_LOOK_TEST = register(
       "slow_look_test",
-      Builder.of(SlowLookTestEntity::new, MobCategory.MONSTER)
+      Builder.<SlowLookTestEntity>of(SlowLookTestEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1435,7 +1435,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<AiToRideEntity>> AI_TO_RIDE = register(
       "ai_to_ride",
-      Builder.of(AiToRideEntity::new, MobCategory.MONSTER)
+      Builder.<AiToRideEntity>of(AiToRideEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1444,7 +1444,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<AiControllerEntity>> AI_CONTROLLER = register(
       "ai_controller",
-      Builder.of(AiControllerEntity::new, MobCategory.MONSTER)
+      Builder.<AiControllerEntity>of(AiControllerEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1453,7 +1453,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<AscendSphereAnimEntity>> ASCEND_SPHERE_ANIM = register(
       "ascend_sphere_anim",
-      Builder.of(AscendSphereAnimEntity::new, MobCategory.MONSTER)
+      Builder.<AscendSphereAnimEntity>of(AscendSphereAnimEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1463,7 +1463,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TormentorLaserEntity>> TORMENTOR_LASER = register(
       "tormentor_laser",
-      Builder.of(TormentorLaserEntity::new, MobCategory.MONSTER)
+      Builder.<TormentorLaserEntity>of(TormentorLaserEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1473,7 +1473,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<WarpStaffDirectionEntity>> WARP_STAFF_DIRECTION = register(
       "warp_staff_direction",
-      Builder.of(WarpStaffDirectionEntity::new, MobCategory.MONSTER)
+      Builder.<WarpStaffDirectionEntity>of(WarpStaffDirectionEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1483,7 +1483,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<GiantEnemySpiderEntity>> GIANT_ENEMY_SPIDER = register(
       "giant_enemy_spider",
-      Builder.of(GiantEnemySpiderEntity::new, MobCategory.CREATURE)
+      Builder.<GiantEnemySpiderEntity>of(GiantEnemySpiderEntity::new, MobCategory.CREATURE)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(120)
          .setUpdateInterval(3)
@@ -1493,7 +1493,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<InsaneModeSpawnsEntity>> INSANE_MODE_SPAWNS = register(
       "insane_mode_spawns",
-      Builder.of(InsaneModeSpawnsEntity::new, MobCategory.MONSTER)
+      Builder.<InsaneModeSpawnsEntity>of(InsaneModeSpawnsEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1502,7 +1502,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderRecluseEntity>> SPIDER_RECLUSE = register(
       "spider_recluse",
-      Builder.of(SpiderRecluseEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderRecluseEntity>of(SpiderRecluseEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1511,7 +1511,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TormentorFlashAnimEntity>> TORMENTOR_FLASH_ANIM = register(
       "tormentor_flash_anim",
-      Builder.of(TormentorFlashAnimEntity::new, MobCategory.MONSTER)
+      Builder.<TormentorFlashAnimEntity>of(TormentorFlashAnimEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(500)
          .setUpdateInterval(3)
@@ -1521,7 +1521,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderChaserHallucinationEntity>> SPIDER_CHASER_HALLUCINATION = register(
       "spider_chaser_hallucination",
-      Builder.of(SpiderChaserHallucinationEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderChaserHallucinationEntity>of(SpiderChaserHallucinationEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(130)
          .setUpdateInterval(3)
@@ -1531,7 +1531,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderChaserHallucination2Entity>> SPIDER_CHASER_HALLUCINATION_2 = register(
       "spider_chaser_hallucination_2",
-      Builder.of(SpiderChaserHallucination2Entity::new, MobCategory.MONSTER)
+      Builder.<SpiderChaserHallucination2Entity>of(SpiderChaserHallucination2Entity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(130)
          .setUpdateInterval(3)
@@ -1541,7 +1541,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<CaveWebEntity>> CAVE_WEB = register(
       "cave_web",
-      Builder.of(CaveWebEntity::new, MobCategory.MONSTER)
+      Builder.<CaveWebEntity>of(CaveWebEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1550,7 +1550,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<AnyDimensionSpawnerEntity>> ANY_DIMENSION_SPAWNER = register(
       "any_dimension_spawner",
-      Builder.of(AnyDimensionSpawnerEntity::new, MobCategory.MONSTER)
+      Builder.<AnyDimensionSpawnerEntity>of(AnyDimensionSpawnerEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1559,7 +1559,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderObstructerEntity>> SPIDER_OBSTRUCTER = register(
       "spider_obstructer",
-      Builder.of(SpiderObstructerEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderObstructerEntity>of(SpiderObstructerEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1568,7 +1568,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<GenesisShotEntity>> GENESIS_SHOT = register(
       "genesis_shot",
-      Builder.of(GenesisShotEntity::new, MobCategory.MISC)
+      Builder.<GenesisShotEntity>of(GenesisShotEntity::new, MobCategory.MISC)
          .setCustomClientFactory(GenesisShotEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -1577,7 +1577,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<HornetProjectileEntity>> HORNET_PROJECTILE = register(
       "hornet_projectile",
-      Builder.of(HornetProjectileEntity::new, MobCategory.MONSTER)
+      Builder.<HornetProjectileEntity>of(HornetProjectileEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(70)
          .setUpdateInterval(3)
@@ -1586,7 +1586,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<ChronoShotEntity>> CHRONO_SHOT = register(
       "chrono_shot",
-      Builder.of(ChronoShotEntity::new, MobCategory.MISC)
+      Builder.<ChronoShotEntity>of(ChronoShotEntity::new, MobCategory.MISC)
          .setCustomClientFactory(ChronoShotEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -1595,7 +1595,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TormentorTestEntity>> TORMENTOR_TEST = register(
       "tormentor_test",
-      Builder.of(TormentorTestEntity::new, MobCategory.MONSTER)
+      Builder.<TormentorTestEntity>of(TormentorTestEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(500)
          .setUpdateInterval(3)
@@ -1605,7 +1605,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderChaserHallucination3Entity>> SPIDER_CHASER_HALLUCINATION_3 = register(
       "spider_chaser_hallucination_3",
-      Builder.of(SpiderChaserHallucination3Entity::new, MobCategory.MONSTER)
+      Builder.<SpiderChaserHallucination3Entity>of(SpiderChaserHallucination3Entity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1615,7 +1615,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderLungerEntity>> SPIDER_LUNGER = register(
       "spider_lunger",
-      Builder.of(SpiderLungerEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderLungerEntity>of(SpiderLungerEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1624,7 +1624,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<StickBugEntity>> STICK_BUG = register(
       "stick_bug",
-      Builder.of(StickBugEntity::new, MobCategory.MONSTER)
+      Builder.<StickBugEntity>of(StickBugEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(60)
          .setUpdateInterval(3)
@@ -1633,7 +1633,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TormentorHitboxEntity>> TORMENTOR_HITBOX = register(
       "tormentor_hitbox",
-      Builder.of(TormentorHitboxEntity::new, MobCategory.MONSTER)
+      Builder.<TormentorHitboxEntity>of(TormentorHitboxEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1643,7 +1643,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TormentorT2Entity>> TORMENTOR_T_2 = register(
       "tormentor_t_2",
-      Builder.of(TormentorT2Entity::new, MobCategory.MONSTER)
+      Builder.<TormentorT2Entity>of(TormentorT2Entity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(500)
          .setUpdateInterval(3)
@@ -1653,7 +1653,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TormentorT3Entity>> TORMENTOR_T_3 = register(
       "tormentor_t_3",
-      Builder.of(TormentorT3Entity::new, MobCategory.MONSTER)
+      Builder.<TormentorT3Entity>of(TormentorT3Entity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(500)
          .setUpdateInterval(3)
@@ -1663,7 +1663,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TormentorT4Entity>> TORMENTOR_T_4 = register(
       "tormentor_t_4",
-      Builder.of(TormentorT4Entity::new, MobCategory.MONSTER)
+      Builder.<TormentorT4Entity>of(TormentorT4Entity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(500)
          .setUpdateInterval(3)
@@ -1673,7 +1673,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TormentorT5Entity>> TORMENTOR_T_5 = register(
       "tormentor_t_5",
-      Builder.of(TormentorT5Entity::new, MobCategory.MONSTER)
+      Builder.<TormentorT5Entity>of(TormentorT5Entity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(500)
          .setUpdateInterval(3)
@@ -1683,7 +1683,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<HitboxExpanderEntity>> HITBOX_EXPANDER = register(
       "hitbox_expander",
-      Builder.of(HitboxExpanderEntity::new, MobCategory.MONSTER)
+      Builder.<HitboxExpanderEntity>of(HitboxExpanderEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1693,7 +1693,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TormentorShieldEntity>> TORMENTOR_SHIELD = register(
       "tormentor_shield",
-      Builder.of(TormentorShieldEntity::new, MobCategory.MONSTER)
+      Builder.<TormentorShieldEntity>of(TormentorShieldEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(60)
          .setUpdateInterval(3)
@@ -1703,7 +1703,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<TimeDistortionWaveEntity>> TIME_DISTORTION_WAVE = register(
       "time_distortion_wave",
-      Builder.of(TimeDistortionWaveEntity::new, MobCategory.MONSTER)
+      Builder.<TimeDistortionWaveEntity>of(TimeDistortionWaveEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1713,7 +1713,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderMatriarchEntity>> SPIDER_MATRIARCH = register(
       "spider_matriarch",
-      Builder.of(SpiderMatriarchEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderMatriarchEntity>of(SpiderMatriarchEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(128)
          .setUpdateInterval(3)
@@ -1723,7 +1723,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderMatriarchLarvaeEntity>> SPIDER_MATRIARCH_LARVAE = register(
       "spider_matriarch_larvae",
-      Builder.of(SpiderMatriarchLarvaeEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderMatriarchLarvaeEntity>of(SpiderMatriarchLarvaeEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1732,7 +1732,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<ArachnoidTrisectorEntity>> ARACHNOID_TRISECTOR = register(
       "arachnoid_trisector",
-      Builder.of(ArachnoidTrisectorEntity::new, MobCategory.MONSTER)
+      Builder.<ArachnoidTrisectorEntity>of(ArachnoidTrisectorEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(128)
          .setUpdateInterval(3)
@@ -1742,7 +1742,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<ChronoSpearShotEntity>> CHRONO_SPEAR_SHOT = register(
       "chrono_spear_shot",
-      Builder.of(ChronoSpearShotEntity::new, MobCategory.MISC)
+      Builder.<ChronoSpearShotEntity>of(ChronoSpearShotEntity::new, MobCategory.MISC)
          .setCustomClientFactory(ChronoSpearShotEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -1751,7 +1751,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<DiabolosDecimatorEntity>> DIABOLOS_DECIMATOR = register(
       "diabolos_decimator",
-      Builder.of(DiabolosDecimatorEntity::new, MobCategory.MONSTER)
+      Builder.<DiabolosDecimatorEntity>of(DiabolosDecimatorEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(200)
          .setUpdateInterval(3)
@@ -1761,7 +1761,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderRecluseDisplayEntity>> SPIDER_RECLUSE_DISPLAY = register(
       "spider_recluse_display",
-      Builder.of(SpiderRecluseDisplayEntity::new, MobCategory.MONSTER)
+      Builder.<SpiderRecluseDisplayEntity>of(SpiderRecluseDisplayEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1770,7 +1770,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpacetimeAnchorEntity>> SPACETIME_ANCHOR = register(
       "spacetime_anchor",
-      Builder.of(SpacetimeAnchorEntity::new, MobCategory.MISC)
+      Builder.<SpacetimeAnchorEntity>of(SpacetimeAnchorEntity::new, MobCategory.MISC)
          .setCustomClientFactory(SpacetimeAnchorEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -1779,7 +1779,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<ArachnoidTimeCloneEntity>> ARACHNOID_TIME_CLONE = register(
       "arachnoid_time_clone",
-      Builder.of(ArachnoidTimeCloneEntity::new, MobCategory.MONSTER)
+      Builder.<ArachnoidTimeCloneEntity>of(ArachnoidTimeCloneEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(128)
          .setUpdateInterval(3)
@@ -1789,7 +1789,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<ArachnoidShadowCloneEntity>> ARACHNOID_SHADOW_CLONE = register(
       "arachnoid_shadow_clone",
-      Builder.of(ArachnoidShadowCloneEntity::new, MobCategory.MONSTER)
+      Builder.<ArachnoidShadowCloneEntity>of(ArachnoidShadowCloneEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(100)
          .setUpdateInterval(3)
@@ -1799,7 +1799,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<BlockTestEntity>> BLOCK_TEST = register(
       "block_test",
-      Builder.of(BlockTestEntity::new, MobCategory.MONSTER)
+      Builder.<BlockTestEntity>of(BlockTestEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
          .setUpdateInterval(3)
@@ -1809,7 +1809,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<NemesisProjectileEntity>> NEMESIS_PROJECTILE = register(
       "nemesis_projectile",
-      Builder.of(NemesisProjectileEntity::new, MobCategory.MONSTER)
+      Builder.<NemesisProjectileEntity>of(NemesisProjectileEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(70)
          .setUpdateInterval(3)
@@ -1819,7 +1819,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<SpiderSinkerEntity>> SPIDER_SINKER = register(
       "spider_sinker",
-      Builder.of(SpiderSinkerEntity::new, MobCategory.MONSTER)
+           EntityType.Builder.<SpiderSinkerEntity>of(SpiderSinkerEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(100)
          .setUpdateInterval(3)
@@ -1828,7 +1828,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<HomingSparkEntity>> HOMING_SPARK = register(
       "homing_spark",
-      Builder.of(HomingSparkEntity::new, MobCategory.MISC)
+      Builder.<HomingSparkEntity>of(HomingSparkEntity::new, MobCategory.MISC)
          .setCustomClientFactory(HomingSparkEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -1837,7 +1837,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<DiabolosDecimatorCloneEntity>> DIABOLOS_DECIMATOR_CLONE = register(
       "diabolos_decimator_clone",
-      Builder.of(DiabolosDecimatorCloneEntity::new, MobCategory.MONSTER)
+      Builder.<DiabolosDecimatorCloneEntity>of(DiabolosDecimatorCloneEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(128)
          .setUpdateInterval(3)
@@ -1847,7 +1847,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<EntropyConduitEntity>> ENTROPY_CONDUIT = register(
       "entropy_conduit",
-      Builder.of(EntropyConduitEntity::new, MobCategory.MONSTER)
+      Builder.<EntropyConduitEntity>of(EntropyConduitEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(120)
          .setUpdateInterval(3)
@@ -1857,7 +1857,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<GravitonShotEntity>> GRAVITON_SHOT = register(
       "graviton_shot",
-      Builder.of(GravitonShotEntity::new, MobCategory.MISC)
+      Builder.<GravitonShotEntity>of(GravitonShotEntity::new, MobCategory.MISC)
          .setCustomClientFactory(GravitonShotEntity::new)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(64)
@@ -1866,7 +1866,7 @@ public class ArphexModEntities {
    );
    public static final RegistryObject<EntityType<DiabolosShadowCloneEntity>> DIABOLOS_SHADOW_CLONE = register(
       "diabolos_shadow_clone",
-      Builder.of(DiabolosShadowCloneEntity::new, MobCategory.MONSTER)
+      Builder.<DiabolosShadowCloneEntity>of(DiabolosShadowCloneEntity::new, MobCategory.MONSTER)
          .setShouldReceiveVelocityUpdates(true)
          .setTrackingRange(100)
          .setUpdateInterval(3)
@@ -2033,151 +2033,151 @@ public class ArphexModEntities {
 
    @SubscribeEvent
    public static void registerAttributes(EntityAttributeCreationEvent event) {
-      event.put((EntityType)DRACONIC_VOIDLASHER.get(), SpiderMothDwellerEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_MOTH_LARVAE.get(), SpiderMothLarvaeEntity.createAttributes().build());
-      event.put((EntityType)TELEPORT_GHOST.get(), TeleportGhostEntity.createAttributes().build());
-      event.put((EntityType)MOTH_SHADOW_CLONE.get(), MothShadowCloneEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_LARVAE.get(), SpiderLarvaeEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_LARVAE_TINY.get(), SpiderLarvaeTinyEntity.createAttributes().build());
-      event.put((EntityType)LONG_LEGS.get(), LongLegsEntity.createAttributes().build());
-      event.put((EntityType)LONG_LEGS_TINY.get(), LongLegsTinyEntity.createAttributes().build());
-      event.put((EntityType)DWELLER_SLEEP_SPAWNER.get(), DwellerSleepSpawnerEntity.createAttributes().build());
-      event.put((EntityType)CENTIPEDE_STALKER.get(), CentipedeStalkerEntity.createAttributes().build());
-      event.put((EntityType)BLOOD_WORM.get(), BloodWormEntity.createAttributes().build());
-      event.put((EntityType)BEETLE_TICK_MITE.get(), BeetleTickMiteEntity.createAttributes().build());
-      event.put((EntityType)PURE_STALKING.get(), PureStalkingEntity.createAttributes().build());
-      event.put((EntityType)RUSH_SCARE.get(), RushScareEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_BROOD.get(), SpiderBroodEntity.createAttributes().build());
-      event.put((EntityType)SKY_STALKER.get(), SkyStalkerEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_FLAT.get(), SpiderFlatEntity.createAttributes().build());
-      event.put((EntityType)CENTIPEDE_EVICTOR.get(), CentipedeEvictorEntity.createAttributes().build());
-      event.put((EntityType)CENTIPEDE_EVICTOR_LARVAE.get(), CentipedeEvictorLarvaeEntity.createAttributes().build());
-      event.put((EntityType)TINY_CENTIPEDE_BREACHER.get(), TinyCentipedeBreacherEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_LURKER.get(), SpiderLurkerEntity.createAttributes().build());
-      event.put((EntityType)INVISIBLE_STALKER.get(), InvisibleStalkerEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_FUNNEL.get(), SpiderFunnelEntity.createAttributes().build());
-      event.put((EntityType)WEB_HARNESS.get(), WebHarnessEntity.createAttributes().build());
-      event.put((EntityType)WEB_FUNNEL.get(), WebFunnelEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_GOLIATH.get(), SpiderGoliathEntity.createAttributes().build());
-      event.put((EntityType)SILVERFISH_SPECTRE.get(), SilverfishSpectreEntity.createAttributes().build());
-      event.put((EntityType)TAMED_TARANTULA.get(), TamedTarantulaEntity.createAttributes().build());
-      event.put((EntityType)HORNET_HARBINGER.get(), HornetHarbingerEntity.createAttributes().build());
-      event.put((EntityType)HORNET_HARBINGER_GIANT.get(), HornetHarbingerGiantEntity.createAttributes().build());
-      event.put((EntityType)MOSQUITO_MORBIDITY.get(), MosquitoMorbidityEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_MOTH_SUMMON.get(), SpiderMothSummonEntity.createAttributes().build());
-      event.put((EntityType)LONG_LEGS_FLY.get(), LongLegsFlyEntity.createAttributes().build());
-      event.put((EntityType)SCORPIOID_BLOODLUSTER.get(), ScorpioidBloodlusterEntity.createAttributes().build());
-      event.put((EntityType)SCORPIOID_CLONE.get(), ScorpioidCloneEntity.createAttributes().build());
-      event.put((EntityType)SCORPIOID_INITIAL.get(), ScorpioidInitialEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_MOTH_SUMMON_LARVAE.get(), SpiderMothSummonLarvaeEntity.createAttributes().build());
-      event.put((EntityType)SCORPIOID_CHASER_HALLUCINATION.get(), ScorpioidChaserHallucinationEntity.createAttributes().build());
-      event.put((EntityType)REPELLANT.get(), RepellantEntity.createAttributes().build());
-      event.put((EntityType)ANT_ARSONIST.get(), AntArsonistEntity.createAttributes().build());
-      event.put((EntityType)LOCUST_LANDSCOURGE.get(), LocustLandscourgeEntity.createAttributes().build());
-      event.put((EntityType)WEB_HARNESS_DOWN.get(), WebHarnessDownEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_PROWLER.get(), SpiderProwlerEntity.createAttributes().build());
-      event.put((EntityType)GIANT_WEB.get(), GiantWebEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_JUMP.get(), SpiderJumpEntity.createAttributes().build());
-      event.put((EntityType)FLY_FESTERER.get(), FlyFestererEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_MOTH.get(), SpiderMothEntity.createAttributes().build());
-      event.put((EntityType)SCORPIOID_SHADOW_CLONE.get(), ScorpioidShadowCloneEntity.createAttributes().build());
-      event.put((EntityType)BUTTERFLY_BEWITCHER_GIANT.get(), ButterflyBewitcherGiantEntity.createAttributes().build());
-      event.put((EntityType)MILLIPEDE_MARAUDER.get(), MillipedeMarauderEntity.createAttributes().build());
-      event.put((EntityType)MAGGOT_LARVAE.get(), MaggotLarvaeEntity.createAttributes().build());
-      event.put((EntityType)ROACH_RIVERSPAWN.get(), RoachRiverspawnEntity.createAttributes().build());
-      event.put((EntityType)DRACONIC_CLONE.get(), DraconicCloneEntity.createAttributes().build());
-      event.put((EntityType)BUTTERFLY_BEWITCHER.get(), ButterflyBewitcherEntity.createAttributes().build());
-      event.put((EntityType)DRAGONFLY_DREADNOUGHT.get(), DragonflyDreadnoughtEntity.createAttributes().build());
-      event.put((EntityType)VOIDLASHER_SHADOW_CLONE.get(), VoidlasherShadowCloneEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_SNATCHER.get(), SpiderSnatcherEntity.createAttributes().build());
-      event.put((EntityType)CRAB_CONSTRICTOR.get(), CrabConstrictorEntity.createAttributes().build());
-      event.put((EntityType)MOTH_MOONTRACKER.get(), MothMoontrackerEntity.createAttributes().build());
-      event.put((EntityType)SCORPION_STRIKER.get(), ScorpionStrikerEntity.createAttributes().build());
-      event.put((EntityType)SCORPION_LARVAE.get(), ScorpionLarvaeEntity.createAttributes().build());
-      event.put((EntityType)RANDOM_AR_PH_EX.get(), RandomArPhExEntity.createAttributes().build());
-      event.put((EntityType)SMALL_WEB.get(), SmallWebEntity.createAttributes().build());
-      event.put((EntityType)SOLIFUGE_SKULKER.get(), SolifugeSkulkerEntity.createAttributes().build());
-      event.put((EntityType)ENORMOUS_SPIDER_HALLUCINATION.get(), EnormousSpiderHallucinationEntity.createAttributes().build());
-      event.put((EntityType)CRAB_LARVAE.get(), CrabLarvaeEntity.createAttributes().build());
-      event.put((EntityType)DRACONIC_FLY_STALK.get(), DraconicFlyStalkEntity.createAttributes().build());
-      event.put((EntityType)BEETLE_BULWARK.get(), BeetleBulwarkEntity.createAttributes().build());
-      event.put((EntityType)SCARAB_SUMMON.get(), ScarabSummonEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_REAPER.get(), SpiderReaperEntity.createAttributes().build());
-      event.put((EntityType)DUNGEON_TRIGGER.get(), DungeonTriggerEntity.createAttributes().build());
-      event.put((EntityType)ANT_ARSONIST_WORKER.get(), AntArsonistWorkerEntity.createAttributes().build());
-      event.put((EntityType)ANT_ARSONIST_SOLDIER.get(), AntArsonistSoldierEntity.createAttributes().build());
-      event.put((EntityType)ANT_ARSONIST_ALATE_QUEEN.get(), AntArsonistAlateQueenEntity.createAttributes().build());
-      event.put((EntityType)ANT_ARSONIST_DRONE.get(), AntArsonistDroneEntity.createAttributes().build());
-      event.put((EntityType)TERMITE_TUNNELER_WORKER.get(), TermiteTunnelerWorkerEntity.createAttributes().build());
-      event.put((EntityType)TERMITE_TUNNELER_SOLDIER.get(), TermiteTunnelerSoldierEntity.createAttributes().build());
-      event.put((EntityType)RANDOM_TERMITE.get(), RandomTermiteEntity.createAttributes().build());
-      event.put((EntityType)TERMITE_TUNNELER_ALATE.get(), TermiteTunnelerAlateEntity.createAttributes().build());
-      event.put((EntityType)TERMITE_TUNNELER_KING.get(), TermiteTunnelerKingEntity.createAttributes().build());
-      event.put((EntityType)TERMITE_TUNNELER_QUEEN.get(), TermiteTunnelerQueenEntity.createAttributes().build());
-      event.put((EntityType)TORMENTOR.get(), TORMENTOREntity.createAttributes().build());
-      event.put((EntityType)MANTIS_MUTILATOR.get(), MantisMutilatorEntity.createAttributes().build());
-      event.put((EntityType)TORMENTOR_INITIAL.get(), TormentorInitialEntity.createAttributes().build());
-      event.put((EntityType)CRAWLING_RANDOM.get(), CrawlingRandomEntity.createAttributes().build());
-      event.put((EntityType)TORMENTOR_TENDRIL.get(), TormentorTendrilEntity.createAttributes().build());
-      event.put((EntityType)TORMENTOR_MOTH_SUMMON.get(), TormentorMothSummonEntity.createAttributes().build());
-      event.put((EntityType)TORMENTOR_SCORPIOID_SUMMON.get(), TormentorScorpioidSummonEntity.createAttributes().build());
-      event.put((EntityType)TORMENTOR_VOIDLASHER_SUMMON.get(), TormentorVoidlasherSummonEntity.createAttributes().build());
-      event.put((EntityType)TORMENTOR_SUMMON.get(), TormentorSummonEntity.createAttributes().build());
-      event.put((EntityType)TORMENTOR_SPHERE.get(), TormentorSphereEntity.createAttributes().build());
-      event.put((EntityType)TORMENTOR_CATERPILLAR.get(), TormentorCaterpillarEntity.createAttributes().build());
-      event.put((EntityType)TORMENTOR_LARVAE.get(), TormentorLarvaeEntity.createAttributes().build());
-      event.put((EntityType)SMALL_TORMENT_SPHERE.get(), SmallTormentSphereEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_INFESTOR.get(), SpiderInfestorEntity.createAttributes().build());
-      event.put((EntityType)TORMENTOR_LOW_DISPLAY.get(), TormentorLowDisplayEntity.createAttributes().build());
-      event.put((EntityType)TORMENTOR_LOW_DISPLAY_ANIM.get(), TormentorLowDisplayAnimEntity.createAttributes().build());
-      event.put((EntityType)SUMMON_SUN_BLAST.get(), SummonSunBlastEntity.createAttributes().build());
-      event.put((EntityType)WASP_NEMESIS.get(), WaspNemesisEntity.createAttributes().build());
-      event.put((EntityType)SEGMENTED_BODY.get(), SegmentedBodyEntity.createAttributes().build());
-      event.put((EntityType)ARTHROPLEURA_ABOMINATION.get(), ArthropleuraAbominationEntity.createAttributes().build());
-      event.put((EntityType)VENUS_FLYTRAP.get(), VenusFlytrapEntity.createAttributes().build());
-      event.put((EntityType)FLYTRAP.get(), FlytrapEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_AMBUSHER.get(), SpiderAmbusherEntity.createAttributes().build());
-      event.put((EntityType)SPHERE_ANIM.get(), SphereAnimEntity.createAttributes().build());
-      event.put((EntityType)SLOW_LOOK_TEST.get(), SlowLookTestEntity.createAttributes().build());
-      event.put((EntityType)AI_TO_RIDE.get(), AiToRideEntity.createAttributes().build());
-      event.put((EntityType)AI_CONTROLLER.get(), AiControllerEntity.createAttributes().build());
-      event.put((EntityType)ASCEND_SPHERE_ANIM.get(), AscendSphereAnimEntity.createAttributes().build());
-      event.put((EntityType)TORMENTOR_LASER.get(), TormentorLaserEntity.createAttributes().build());
-      event.put((EntityType)WARP_STAFF_DIRECTION.get(), WarpStaffDirectionEntity.createAttributes().build());
-      event.put((EntityType)GIANT_ENEMY_SPIDER.get(), GiantEnemySpiderEntity.createAttributes().build());
-      event.put((EntityType)INSANE_MODE_SPAWNS.get(), InsaneModeSpawnsEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_RECLUSE.get(), SpiderRecluseEntity.createAttributes().build());
-      event.put((EntityType)TORMENTOR_FLASH_ANIM.get(), TormentorFlashAnimEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_CHASER_HALLUCINATION.get(), SpiderChaserHallucinationEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_CHASER_HALLUCINATION_2.get(), SpiderChaserHallucination2Entity.createAttributes().build());
-      event.put((EntityType)CAVE_WEB.get(), CaveWebEntity.createAttributes().build());
-      event.put((EntityType)ANY_DIMENSION_SPAWNER.get(), AnyDimensionSpawnerEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_OBSTRUCTER.get(), SpiderObstructerEntity.createAttributes().build());
-      event.put((EntityType)HORNET_PROJECTILE.get(), HornetProjectileEntity.createAttributes().build());
-      event.put((EntityType)TORMENTOR_TEST.get(), TormentorTestEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_CHASER_HALLUCINATION_3.get(), SpiderChaserHallucination3Entity.createAttributes().build());
-      event.put((EntityType)SPIDER_LUNGER.get(), SpiderLungerEntity.createAttributes().build());
-      event.put((EntityType)STICK_BUG.get(), StickBugEntity.createAttributes().build());
-      event.put((EntityType)TORMENTOR_HITBOX.get(), TormentorHitboxEntity.createAttributes().build());
-      event.put((EntityType)TORMENTOR_T_2.get(), TormentorT2Entity.createAttributes().build());
-      event.put((EntityType)TORMENTOR_T_3.get(), TormentorT3Entity.createAttributes().build());
-      event.put((EntityType)TORMENTOR_T_4.get(), TormentorT4Entity.createAttributes().build());
-      event.put((EntityType)TORMENTOR_T_5.get(), TormentorT5Entity.createAttributes().build());
-      event.put((EntityType)HITBOX_EXPANDER.get(), HitboxExpanderEntity.createAttributes().build());
-      event.put((EntityType)TORMENTOR_SHIELD.get(), TormentorShieldEntity.createAttributes().build());
-      event.put((EntityType)TIME_DISTORTION_WAVE.get(), TimeDistortionWaveEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_MATRIARCH.get(), SpiderMatriarchEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_MATRIARCH_LARVAE.get(), SpiderMatriarchLarvaeEntity.createAttributes().build());
-      event.put((EntityType)ARACHNOID_TRISECTOR.get(), ArachnoidTrisectorEntity.createAttributes().build());
-      event.put((EntityType)DIABOLOS_DECIMATOR.get(), DiabolosDecimatorEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_RECLUSE_DISPLAY.get(), SpiderRecluseDisplayEntity.createAttributes().build());
-      event.put((EntityType)ARACHNOID_TIME_CLONE.get(), ArachnoidTimeCloneEntity.createAttributes().build());
-      event.put((EntityType)ARACHNOID_SHADOW_CLONE.get(), ArachnoidShadowCloneEntity.createAttributes().build());
-      event.put((EntityType)BLOCK_TEST.get(), BlockTestEntity.createAttributes().build());
-      event.put((EntityType)NEMESIS_PROJECTILE.get(), NemesisProjectileEntity.createAttributes().build());
-      event.put((EntityType)SPIDER_SINKER.get(), SpiderSinkerEntity.createAttributes().build());
-      event.put((EntityType)DIABOLOS_DECIMATOR_CLONE.get(), DiabolosDecimatorCloneEntity.createAttributes().build());
-      event.put((EntityType)ENTROPY_CONDUIT.get(), EntropyConduitEntity.createAttributes().build());
-      event.put((EntityType)DIABOLOS_SHADOW_CLONE.get(), DiabolosShadowCloneEntity.createAttributes().build());
+      event.put(DRACONIC_VOIDLASHER.get(), SpiderMothDwellerEntity.createAttributes().build());
+      event.put(SPIDER_MOTH_LARVAE.get(), SpiderMothLarvaeEntity.createAttributes().build());
+      event.put(TELEPORT_GHOST.get(), TeleportGhostEntity.createAttributes().build());
+      event.put(MOTH_SHADOW_CLONE.get(), MothShadowCloneEntity.createAttributes().build());
+      event.put(SPIDER_LARVAE.get(), SpiderLarvaeEntity.createAttributes().build());
+      event.put(SPIDER_LARVAE_TINY.get(), SpiderLarvaeTinyEntity.createAttributes().build());
+      event.put(LONG_LEGS.get(), LongLegsEntity.createAttributes().build());
+      event.put(LONG_LEGS_TINY.get(), LongLegsTinyEntity.createAttributes().build());
+      event.put(DWELLER_SLEEP_SPAWNER.get(), DwellerSleepSpawnerEntity.createAttributes().build());
+      event.put(CENTIPEDE_STALKER.get(), CentipedeStalkerEntity.createAttributes().build());
+      event.put(BLOOD_WORM.get(), BloodWormEntity.createAttributes().build());
+      event.put(BEETLE_TICK_MITE.get(), BeetleTickMiteEntity.createAttributes().build());
+      event.put(PURE_STALKING.get(), PureStalkingEntity.createAttributes().build());
+      event.put(RUSH_SCARE.get(), RushScareEntity.createAttributes().build());
+      event.put(SPIDER_BROOD.get(), SpiderBroodEntity.createAttributes().build());
+      event.put(SKY_STALKER.get(), SkyStalkerEntity.createAttributes().build());
+      event.put(SPIDER_FLAT.get(), SpiderFlatEntity.createAttributes().build());
+      event.put(CENTIPEDE_EVICTOR.get(), CentipedeEvictorEntity.createAttributes().build());
+      event.put(CENTIPEDE_EVICTOR_LARVAE.get(), CentipedeEvictorLarvaeEntity.createAttributes().build());
+      event.put(TINY_CENTIPEDE_BREACHER.get(), TinyCentipedeBreacherEntity.createAttributes().build());
+      event.put(SPIDER_LURKER.get(), SpiderLurkerEntity.createAttributes().build());
+      event.put(INVISIBLE_STALKER.get(), InvisibleStalkerEntity.createAttributes().build());
+      event.put(SPIDER_FUNNEL.get(), SpiderFunnelEntity.createAttributes().build());
+      event.put(WEB_HARNESS.get(), WebHarnessEntity.createAttributes().build());
+      event.put(WEB_FUNNEL.get(), WebFunnelEntity.createAttributes().build());
+      event.put(SPIDER_GOLIATH.get(), SpiderGoliathEntity.createAttributes().build());
+      event.put(SILVERFISH_SPECTRE.get(), SilverfishSpectreEntity.createAttributes().build());
+      event.put(TAMED_TARANTULA.get(), TamedTarantulaEntity.createAttributes().build());
+      event.put(HORNET_HARBINGER.get(), HornetHarbingerEntity.createAttributes().build());
+      event.put(HORNET_HARBINGER_GIANT.get(), HornetHarbingerGiantEntity.createAttributes().build());
+      event.put(MOSQUITO_MORBIDITY.get(), MosquitoMorbidityEntity.createAttributes().build());
+      event.put(SPIDER_MOTH_SUMMON.get(), SpiderMothSummonEntity.createAttributes().build());
+      event.put(LONG_LEGS_FLY.get(), LongLegsFlyEntity.createAttributes().build());
+      event.put(SCORPIOID_BLOODLUSTER.get(), ScorpioidBloodlusterEntity.createAttributes().build());
+      event.put(SCORPIOID_CLONE.get(), ScorpioidCloneEntity.createAttributes().build());
+      event.put(SCORPIOID_INITIAL.get(), ScorpioidInitialEntity.createAttributes().build());
+      event.put(SPIDER_MOTH_SUMMON_LARVAE.get(), SpiderMothSummonLarvaeEntity.createAttributes().build());
+      event.put(SCORPIOID_CHASER_HALLUCINATION.get(), ScorpioidChaserHallucinationEntity.createAttributes().build());
+      event.put(REPELLANT.get(), RepellantEntity.createAttributes().build());
+      event.put(ANT_ARSONIST.get(), AntArsonistEntity.createAttributes().build());
+      event.put(LOCUST_LANDSCOURGE.get(), LocustLandscourgeEntity.createAttributes().build());
+      event.put(WEB_HARNESS_DOWN.get(), WebHarnessDownEntity.createAttributes().build());
+      event.put(SPIDER_PROWLER.get(), SpiderProwlerEntity.createAttributes().build());
+      event.put(GIANT_WEB.get(), GiantWebEntity.createAttributes().build());
+      event.put(SPIDER_JUMP.get(), SpiderJumpEntity.createAttributes().build());
+      event.put(FLY_FESTERER.get(), FlyFestererEntity.createAttributes().build());
+      event.put(SPIDER_MOTH.get(), SpiderMothEntity.createAttributes().build());
+      event.put(SCORPIOID_SHADOW_CLONE.get(), ScorpioidShadowCloneEntity.createAttributes().build());
+      event.put(BUTTERFLY_BEWITCHER_GIANT.get(), ButterflyBewitcherGiantEntity.createAttributes().build());
+      event.put(MILLIPEDE_MARAUDER.get(), MillipedeMarauderEntity.createAttributes().build());
+      event.put(MAGGOT_LARVAE.get(), MaggotLarvaeEntity.createAttributes().build());
+      event.put(ROACH_RIVERSPAWN.get(), RoachRiverspawnEntity.createAttributes().build());
+      event.put(DRACONIC_CLONE.get(), DraconicCloneEntity.createAttributes().build());
+      event.put(BUTTERFLY_BEWITCHER.get(), ButterflyBewitcherEntity.createAttributes().build());
+      event.put(DRAGONFLY_DREADNOUGHT.get(), DragonflyDreadnoughtEntity.createAttributes().build());
+      event.put(VOIDLASHER_SHADOW_CLONE.get(), VoidlasherShadowCloneEntity.createAttributes().build());
+      event.put(SPIDER_SNATCHER.get(), SpiderSnatcherEntity.createAttributes().build());
+      event.put(CRAB_CONSTRICTOR.get(), CrabConstrictorEntity.createAttributes().build());
+      event.put(MOTH_MOONTRACKER.get(), MothMoontrackerEntity.createAttributes().build());
+      event.put(SCORPION_STRIKER.get(), ScorpionStrikerEntity.createAttributes().build());
+      event.put(SCORPION_LARVAE.get(), ScorpionLarvaeEntity.createAttributes().build());
+      event.put(RANDOM_AR_PH_EX.get(), RandomArPhExEntity.createAttributes().build());
+      event.put(SMALL_WEB.get(), SmallWebEntity.createAttributes().build());
+      event.put(SOLIFUGE_SKULKER.get(), SolifugeSkulkerEntity.createAttributes().build());
+      event.put(ENORMOUS_SPIDER_HALLUCINATION.get(), EnormousSpiderHallucinationEntity.createAttributes().build());
+      event.put(CRAB_LARVAE.get(), CrabLarvaeEntity.createAttributes().build());
+      event.put(DRACONIC_FLY_STALK.get(), DraconicFlyStalkEntity.createAttributes().build());
+      event.put(BEETLE_BULWARK.get(), BeetleBulwarkEntity.createAttributes().build());
+      event.put(SCARAB_SUMMON.get(), ScarabSummonEntity.createAttributes().build());
+      event.put(SPIDER_REAPER.get(), SpiderReaperEntity.createAttributes().build());
+      event.put(DUNGEON_TRIGGER.get(), DungeonTriggerEntity.createAttributes().build());
+      event.put(ANT_ARSONIST_WORKER.get(), AntArsonistWorkerEntity.createAttributes().build());
+      event.put(ANT_ARSONIST_SOLDIER.get(), AntArsonistSoldierEntity.createAttributes().build());
+      event.put(ANT_ARSONIST_ALATE_QUEEN.get(), AntArsonistAlateQueenEntity.createAttributes().build());
+      event.put(ANT_ARSONIST_DRONE.get(), AntArsonistDroneEntity.createAttributes().build());
+      event.put(TERMITE_TUNNELER_WORKER.get(), TermiteTunnelerWorkerEntity.createAttributes().build());
+      event.put(TERMITE_TUNNELER_SOLDIER.get(), TermiteTunnelerSoldierEntity.createAttributes().build());
+      event.put(RANDOM_TERMITE.get(), RandomTermiteEntity.createAttributes().build());
+      event.put(TERMITE_TUNNELER_ALATE.get(), TermiteTunnelerAlateEntity.createAttributes().build());
+      event.put(TERMITE_TUNNELER_KING.get(), TermiteTunnelerKingEntity.createAttributes().build());
+      event.put(TERMITE_TUNNELER_QUEEN.get(), TermiteTunnelerQueenEntity.createAttributes().build());
+      event.put(TORMENTOR.get(), TORMENTOREntity.createAttributes().build());
+      event.put(MANTIS_MUTILATOR.get(), MantisMutilatorEntity.createAttributes().build());
+      event.put(TORMENTOR_INITIAL.get(), TormentorInitialEntity.createAttributes().build());
+      event.put(CRAWLING_RANDOM.get(), CrawlingRandomEntity.createAttributes().build());
+      event.put(TORMENTOR_TENDRIL.get(), TormentorTendrilEntity.createAttributes().build());
+      event.put(TORMENTOR_MOTH_SUMMON.get(), TormentorMothSummonEntity.createAttributes().build());
+      event.put(TORMENTOR_SCORPIOID_SUMMON.get(), TormentorScorpioidSummonEntity.createAttributes().build());
+      event.put(TORMENTOR_VOIDLASHER_SUMMON.get(), TormentorVoidlasherSummonEntity.createAttributes().build());
+      event.put(TORMENTOR_SUMMON.get(), TormentorSummonEntity.createAttributes().build());
+      event.put(TORMENTOR_SPHERE.get(), TormentorSphereEntity.createAttributes().build());
+      event.put(TORMENTOR_CATERPILLAR.get(), TormentorCaterpillarEntity.createAttributes().build());
+      event.put(TORMENTOR_LARVAE.get(), TormentorLarvaeEntity.createAttributes().build());
+      event.put(SMALL_TORMENT_SPHERE.get(), SmallTormentSphereEntity.createAttributes().build());
+      event.put(SPIDER_INFESTOR.get(), SpiderInfestorEntity.createAttributes().build());
+      event.put(TORMENTOR_LOW_DISPLAY.get(), TormentorLowDisplayEntity.createAttributes().build());
+      event.put(TORMENTOR_LOW_DISPLAY_ANIM.get(), TormentorLowDisplayAnimEntity.createAttributes().build());
+      event.put(SUMMON_SUN_BLAST.get(), SummonSunBlastEntity.createAttributes().build());
+      event.put(WASP_NEMESIS.get(), WaspNemesisEntity.createAttributes().build());
+      event.put(SEGMENTED_BODY.get(), SegmentedBodyEntity.createAttributes().build());
+      event.put(ARTHROPLEURA_ABOMINATION.get(), ArthropleuraAbominationEntity.createAttributes().build());
+      event.put(VENUS_FLYTRAP.get(), VenusFlytrapEntity.createAttributes().build());
+      event.put(FLYTRAP.get(), FlytrapEntity.createAttributes().build());
+      event.put(SPIDER_AMBUSHER.get(), SpiderAmbusherEntity.createAttributes().build());
+      event.put(SPHERE_ANIM.get(), SphereAnimEntity.createAttributes().build());
+      event.put(SLOW_LOOK_TEST.get(), SlowLookTestEntity.createAttributes().build());
+      event.put(AI_TO_RIDE.get(), AiToRideEntity.createAttributes().build());
+      event.put(AI_CONTROLLER.get(), AiControllerEntity.createAttributes().build());
+      event.put(ASCEND_SPHERE_ANIM.get(), AscendSphereAnimEntity.createAttributes().build());
+      event.put(TORMENTOR_LASER.get(), TormentorLaserEntity.createAttributes().build());
+      event.put(WARP_STAFF_DIRECTION.get(), WarpStaffDirectionEntity.createAttributes().build());
+      event.put(GIANT_ENEMY_SPIDER.get(), GiantEnemySpiderEntity.createAttributes().build());
+      event.put(INSANE_MODE_SPAWNS.get(), InsaneModeSpawnsEntity.createAttributes().build());
+      event.put(SPIDER_RECLUSE.get(), SpiderRecluseEntity.createAttributes().build());
+      event.put(TORMENTOR_FLASH_ANIM.get(), TormentorFlashAnimEntity.createAttributes().build());
+      event.put(SPIDER_CHASER_HALLUCINATION.get(), SpiderChaserHallucinationEntity.createAttributes().build());
+      event.put(SPIDER_CHASER_HALLUCINATION_2.get(), SpiderChaserHallucination2Entity.createAttributes().build());
+      event.put(CAVE_WEB.get(), CaveWebEntity.createAttributes().build());
+      event.put(ANY_DIMENSION_SPAWNER.get(), AnyDimensionSpawnerEntity.createAttributes().build());
+      event.put(SPIDER_OBSTRUCTER.get(), SpiderObstructerEntity.createAttributes().build());
+      event.put(HORNET_PROJECTILE.get(), HornetProjectileEntity.createAttributes().build());
+      event.put(TORMENTOR_TEST.get(), TormentorTestEntity.createAttributes().build());
+      event.put(SPIDER_CHASER_HALLUCINATION_3.get(), SpiderChaserHallucination3Entity.createAttributes().build());
+      event.put(SPIDER_LUNGER.get(), SpiderLungerEntity.createAttributes().build());
+      event.put(STICK_BUG.get(), StickBugEntity.createAttributes().build());
+      event.put(TORMENTOR_HITBOX.get(), TormentorHitboxEntity.createAttributes().build());
+      event.put(TORMENTOR_T_2.get(), TormentorT2Entity.createAttributes().build());
+      event.put(TORMENTOR_T_3.get(), TormentorT3Entity.createAttributes().build());
+      event.put(TORMENTOR_T_4.get(), TormentorT4Entity.createAttributes().build());
+      event.put(TORMENTOR_T_5.get(), TormentorT5Entity.createAttributes().build());
+      event.put(HITBOX_EXPANDER.get(), HitboxExpanderEntity.createAttributes().build());
+      event.put(TORMENTOR_SHIELD.get(), TormentorShieldEntity.createAttributes().build());
+      event.put(TIME_DISTORTION_WAVE.get(), TimeDistortionWaveEntity.createAttributes().build());
+      event.put(SPIDER_MATRIARCH.get(), SpiderMatriarchEntity.createAttributes().build());
+      event.put(SPIDER_MATRIARCH_LARVAE.get(), SpiderMatriarchLarvaeEntity.createAttributes().build());
+      event.put(ARACHNOID_TRISECTOR.get(), ArachnoidTrisectorEntity.createAttributes().build());
+      event.put(DIABOLOS_DECIMATOR.get(), DiabolosDecimatorEntity.createAttributes().build());
+      event.put(SPIDER_RECLUSE_DISPLAY.get(), SpiderRecluseDisplayEntity.createAttributes().build());
+      event.put(ARACHNOID_TIME_CLONE.get(), ArachnoidTimeCloneEntity.createAttributes().build());
+      event.put(ARACHNOID_SHADOW_CLONE.get(), ArachnoidShadowCloneEntity.createAttributes().build());
+      event.put(BLOCK_TEST.get(), BlockTestEntity.createAttributes().build());
+      event.put(NEMESIS_PROJECTILE.get(), NemesisProjectileEntity.createAttributes().build());
+      event.put(SPIDER_SINKER.get(), SpiderSinkerEntity.createAttributes().build());
+      event.put(DIABOLOS_DECIMATOR_CLONE.get(), DiabolosDecimatorCloneEntity.createAttributes().build());
+      event.put(ENTROPY_CONDUIT.get(), EntropyConduitEntity.createAttributes().build());
+      event.put(DIABOLOS_SHADOW_CLONE.get(), DiabolosShadowCloneEntity.createAttributes().build());
    }
 }
