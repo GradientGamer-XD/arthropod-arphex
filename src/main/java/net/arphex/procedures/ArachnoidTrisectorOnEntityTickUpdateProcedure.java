@@ -59,6 +59,7 @@ import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.registries.ForgeRegistries;
 
+@SuppressWarnings("all")
 public class ArachnoidTrisectorOnEntityTickUpdateProcedure {
    public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
       if (entity != null) {
@@ -175,34 +176,19 @@ public class ArachnoidTrisectorOnEntityTickUpdateProcedure {
                                  + (entity.getZ() - entityiterator.getZ()) * (entity.getZ() - entityiterator.getZ())
                            )
                            < 12.0 + entity.getPersistentData().getDouble("float_expand")) {
-                        int var285;
-                        label1263: {
-                           if (entityiterator instanceof LivingEntity _livEnt && _livEnt.hasEffect((MobEffect)ArphexModMobEffects.TIME_FREEZE.get())) {
-                              var285 = _livEnt.getEffect((MobEffect)ArphexModMobEffects.TIME_FREEZE.get()).getAmplifier();
-                              break label1263;
-                           }
+                         int var285 = 0;
+                         if (entityiterator instanceof LivingEntity _livEnt && _livEnt.hasEffect((MobEffect)ArphexModMobEffects.TIME_FREEZE.get())) {
+                             var285 = _livEnt.getEffect((MobEffect)ArphexModMobEffects.TIME_FREEZE.get()).getAmplifier();
+                         }
 
-                           var285 = 0;
-                        }
-
-                        if (var285 < 20 && entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide()) {
-                           MobEffectInstance var10001;
-                           MobEffect var10003;
-                           int var10005;
-                           label1254: {
-                              var10001 = new MobEffectInstance;
-                              var10003 = (MobEffect)ArphexModMobEffects.TIME_FREEZE.get();
-                              if (entityiterator instanceof LivingEntity _livEnt && _livEnt.hasEffect((MobEffect)ArphexModMobEffects.TIME_FREEZE.get())) {
+                         if (var285 < 20 && entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide()) {
+                             int var10005 = 0;
+                             if (entityiterator instanceof LivingEntity _livEnt && _livEnt.hasEffect((MobEffect)ArphexModMobEffects.TIME_FREEZE.get())) {
                                  var10005 = _livEnt.getEffect((MobEffect)ArphexModMobEffects.TIME_FREEZE.get()).getAmplifier();
-                                 break label1254;
-                              }
+                             }
 
-                              var10005 = 0;
-                           }
-
-                           var10001./* $VF: Unable to resugar constructor */<init>(var10003, 60, var10005 + 1, false, false);
-                           _entity.addEffect(var10001);
-                        }
+                             _entity.addEffect(new MobEffectInstance((MobEffect)ArphexModMobEffects.TIME_FREEZE.get(), 60, var10005 + 1, false, false));
+                         }
                      }
                   }
                }
